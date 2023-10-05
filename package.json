@@ -9,17 +9,24 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@fontsource/poppins": "^5.0.8",
+    "@mui/icons-material": "^5.14.11",
+    "@mui/material": "^5.14.11",
+    "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "next": "latest"
+    "react-player": "^2.13.0",
+    "swiper": "^10.3.0"
   },
   "devDependencies": {
-    "typescript": "latest",
-    "@types/react": "latest",
     "@types/node": "latest",
+    "@types/react": "latest",
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
     "postcss": "latest",
-    "tailwindcss": "latest"
+    "tailwindcss": "latest",
+    "typescript": "latest"
   }
 }

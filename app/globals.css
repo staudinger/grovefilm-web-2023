@@ -1,8 +1,10 @@
+/* @import url("https://p.typekit.net/p.css?s=1&k=ypc0ork&ht=tk&f=23550.23555.23556.23559&a=3341263&app=typekit&e=css"); */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +26,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
