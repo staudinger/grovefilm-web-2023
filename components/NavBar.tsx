@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { Button } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -10,6 +11,7 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Slide from "@mui/material/Slide";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 interface Props {
 	/**
@@ -37,20 +39,49 @@ function HideOnScroll(props: Props) {
 }
 
 export default function NavBar(props: Props) {
+	const router = useRouter();
+
 	return (
 		<React.Fragment>
 			<CssBaseline />
 			<HideOnScroll {...props}>
 				<AppBar color="transparent">
 					<Toolbar>
-						<Typography variant="h6" component="div">
-							<Link href="/dashboard">
-								<img
-									src="../static/grovefilmLogoWhite.png"
-									width="100px"
-								/>
-							</Link>
-						</Typography>
+						<Button
+							onClick={() => {
+								router.push("/home");
+							}}
+						>
+							<img
+								src="../static/grovefilmLogoWhite.png"
+								width="100px"
+							/>
+						</Button>
+						<Button
+							onClick={() => {
+								router.push("/manifesto");
+							}}
+							sx={{
+								color: "white",
+								fontFamily: "Poppins",
+								fontWeight: "bold",
+							}}
+						>
+							Manifesto
+						</Button>
+
+						<Button
+							onClick={() => {
+								router.push("/contact");
+							}}
+							sx={{
+								color: "white",
+								fontFamily: "Poppins",
+								fontWeight: "bold",
+							}}
+						>
+							Contact
+						</Button>
 					</Toolbar>
 				</AppBar>
 			</HideOnScroll>
