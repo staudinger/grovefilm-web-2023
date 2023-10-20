@@ -10,9 +10,40 @@ const Project = (ref: React.ForwardedRef<HTMLDivElement>) => {
 		<PageTransition ref={ref}>
 			<div className="bg-slate-900 h-screen">
 				<NavBar />
-				<div className=" -my-14 mx-2 flex justify-center items-center">
+				{/* <div className=" -my-14 mx-2 flex justify-center items-center">
 					<img src="../../static/GFSquareOrange.PNG" />
-				</div>{" "}
+				</div>{" "} */}
+				<div className="flex justify-center">
+					<div
+						style={{
+							color: "#ba9467",
+							// fontFamily: "latienne-pro",
+							// fontStyle: "normal",
+							// fontWeight: 400,
+						}}
+						className="tracking-tighter font-latienne-pro text-white font-bold text-7xl"
+					>
+						Grove
+					</div>
+					<div
+						style={{ letterSpacing: -7, color: "#ba9467" }}
+						className="font-latienne-pro text-white font-bold text-7xl"
+					>
+						f
+					</div>
+					<div
+						style={{ paddingTop: 1, color: "#ba9467" }}
+						className="tracking-tighter font-latienne-pro text-white font-bold text-7xl "
+					>
+						i
+					</div>
+					<div
+						style={{ color: "#ba9467" }}
+						className="tracking-tighter font-latienne-pro text-white font-bold text-7xl "
+					>
+						lm
+					</div>
+				</div>
 				<iframe
 					src="https://player.vimeo.com/video/619197093?h=bc4804edba&frameborder='0'&autoplay=1&loop=1&autopause=0&muted=1"
 					width="100%"

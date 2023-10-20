@@ -27,8 +27,39 @@ const Contact = (ref: React.ForwardedRef<HTMLDivElement>) => {
 			<div className="bg-slate-900 h-screen">
 				<ThemeProvider theme={theme}>
 					<NavBar />
-					<div className=" -my-14 mx-2 flex justify-center items-center">
+					{/* <div className=" -my-14 mx-2 flex justify-center items-center">
 						<img src="../../static/GFSquareOrange.PNG" />
+					</div> */}
+					<div className="flex justify-center">
+						<div
+							style={{
+								color: "#ba9467",
+								// fontFamily: "latienne-pro",
+								// fontStyle: "normal",
+								// fontWeight: 400,
+							}}
+							className="tracking-tighter font-latienne-pro text-white font-bold text-7xl"
+						>
+							Grove
+						</div>
+						<div
+							style={{ letterSpacing: -7, color: "#ba9467" }}
+							className="font-latienne-pro text-white font-bold text-7xl"
+						>
+							f
+						</div>
+						<div
+							style={{ paddingTop: 1, color: "#ba9467" }}
+							className="tracking-tighter font-latienne-pro text-white font-bold text-7xl "
+						>
+							i
+						</div>
+						<div
+							style={{ color: "#ba9467" }}
+							className="tracking-tighter font-latienne-pro text-white font-bold text-7xl "
+						>
+							lm
+						</div>
 					</div>
 					{/* <div className="ml-6 -mt-1 grid grid-cols-2"> */}
 					<div className="-mt-1">
@@ -101,7 +132,7 @@ const Contact = (ref: React.ForwardedRef<HTMLDivElement>) => {
 						</div>
 						<div
 							className="flex justify-center
-							text-3xl mt-4"
+							text-4xl mt-4 tracking-tight"
 							style={{
 								color: "#ba9467",
 								fontFamily: "Poppins",

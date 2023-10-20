@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Document, { Html, Head, Main, NextScript } from "next/document";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +17,12 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
+			<head>
+				<link
+					rel="stylesheet"
+					href="https://use.typekit.net/heo3ekj.css"
+				/>
+			</head>
 			<body className={inter.className}>{children}</body>
 		</html>
 	);

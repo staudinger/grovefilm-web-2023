@@ -52,10 +52,7 @@ export default function NavBar(props: Props) {
 								router.push("/home");
 							}}
 						>
-							<img
-								src="../static/grovefilmLogoWhite.png"
-								width="100px"
-							/>
+							<img src="../static/handsWhite.png" width="100px" />
 						</Button>
 						<Button
 							onClick={() => {

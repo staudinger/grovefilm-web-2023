@@ -19,6 +19,7 @@ import InfoIcon from "@mui/icons-material/Info";
 import PageTransition from "@/components/PageTransition";
 import { Button } from "@mui/material";
 import { useRouter } from "next/navigation";
+import Logo from "@/components/Logo";
 
 const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 	const [checked, setChecked] = useState(false);
@@ -33,9 +34,10 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 			<div className="bg-slate-900 h-screen">
 				<div className="grid grid-col-1">
 					<NavBar />
-					<div className=" -my-14 mx-2 flex justify-center items-center">
+					{/* <div className=" -my-14 mx-2 flex justify-center items-center">
 						<img src="../../static/GFSquareOrange.PNG" />
-					</div>{" "}
+					</div>{" "} */}
+					<Logo />
 					<div className="flex justify-center items-center text-white mx-8 mb-14 ">
 						<div style={{ fontFamily: "Poppins" }}>
 							We are Grovefilm. We are boutique film makers that
