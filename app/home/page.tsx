@@ -47,14 +47,34 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 				</div>
 				<div className="justify-center items-center flex">
 					<Swiper
+						slidesPerView={1}
+						spaceBetween={10}
+						// using "ratio" endpoints
+						breakpoints={{
+							"@0.75": {
+								slidesPerView: 2,
+								spaceBetween: 20,
+							},
+							"@1.00": {
+								slidesPerView: 3,
+								spaceBetween: 40,
+							},
+							// "@1.50": {
+							// 	slidesPerView: 4,
+							// 	spaceBetween: 50,
+							// },
+							// "@2.00": {
+							// 	slidesPerView: 4,
+							// 	spaceBetween: 60,
+							// },
+						}}
 						modules={[Scrollbar, Mousewheel]}
 						mousewheel={true}
-						spaceBetween={0}
 						scrollbar={{ draggable: true }}
 						speed={600}
 						loop={true}
 						onClick={() => router.push("/project")}
-						slidesPerView={"auto"}
+						// slidesPerView={"auto"}
 					>
 						<SwiperSlide
 							style={{
@@ -63,35 +83,48 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 								textAlign: "center",
 							}}
 						>
-							<ImageListItem
+							{/* <ImageListItem
 								key="Subheader"
 								cols={2}
-							></ImageListItem>
+							></ImageListItem> */}
 
-							<img
-								//src="../static/jessica.jpg"
-								src={`${"../static/jessica.jpg"}?w=248&fit=crop&auto=format`}
-							/>
+							<img src="../static/Almery.jpg" />
 							<ImageListItemBar
 								sx={{
 									backgroundColor: "transparent",
 									"& .MuiImageListItemBar-title": {
 										fontWeight: "bold",
-										color: "#ba9467",
-										fontFamily: "Poppins",
-										fontSize: "30px",
+										color: "#0f172a",
+										// color: "black",
+
+										fontFamily: "latienne-pro",
+										fontSize: "55px",
+										textShadow: ".25px .25px .25px #ba9467",
+										paddingBottom: 60,
+										paddingTop: 1,
+
+										// paddingBottom: 1,
+										// display: "flex",
 									},
-									"& .MuiImageListItemBar-subtitle": {
-										// fontWeight: "bold",
-										color: "#ba9467",
-										fontFamily: "serif",
-										fontSize: "20px",
-										paddingTop: 2,
-										paddingBottom: 2,
-									},
+									// "& .MuiImageListItemBar-subtitle": {
+									// 	fontWeight: "bold",
+									// 	color: "#0f172a",
+									// 	fontFamily: "Poppins",
+									// 	fontSize: "18px",
+									// 	paddingTop: 2,
+									// 	paddingBottom: 60,
+									// 	// textShadow: ".5px .5px .55px black",
+									// 	display: "flex",
+									// },
 								}}
-								title="Jessica & Charlie"
-								subtitle="Wedding"
+								title={
+									<div>
+										<div>Almery</div>
+										<div className="my-2">&</div>
+										<div>Zach</div>
+									</div>
+								}
+								// subtitle="Wedding"
 								// actionIcon={
 								// 	<IconButton
 								// 		sx={{ color: "rgba(255, 255, 255, 0.54)" }}
@@ -108,8 +141,66 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 								textAlign: "center",
 							}}
 						>
-							{" "}
-							<img src="../static/stanley.jpg" />
+							<ImageListItemBar
+								sx={{
+									backgroundColor: "transparent",
+									"& .MuiImageListItemBar-title": {
+										fontWeight: "bold",
+										// color: "#ba9467",
+										color: "#0f172a",
+										fontFamily: "latienne-pro",
+										fontSize: "55px",
+										textShadow: ".25px .25px .25px #ba9467",
+										//textShadow: "1px 1px 1px #0f172a",
+
+										paddingBottom: 55,
+										paddingTop: 2,
+										// display: "flex",
+									},
+								}}
+								title={
+									<div>
+										<div>Christina</div>
+										<div className="my-3">&</div>
+										<div>Eric</div>
+									</div>
+								}
+								subtitle="Wedding"
+							/>{" "}
+							<img src="../static/Christina.jpg" />
+						</SwiperSlide>
+
+						<SwiperSlide
+							style={{
+								display: "flex",
+								justifyContent: "center",
+								textAlign: "center",
+							}}
+						>
+							<ImageListItemBar
+								sx={{
+									backgroundColor: "transparent",
+									"& .MuiImageListItemBar-title": {
+										fontWeight: "bold",
+										color: "#0f172a",
+										fontFamily: "latienne-pro",
+										fontSize: "60px",
+										textShadow: ".25px .25px .25px #ba9467",
+										// textShadow: "1px 1px 1px #ba9467",
+										paddingBottom: 55,
+										paddingTop: 2,
+									},
+								}}
+								// title="Talia & AJ"
+								title={
+									<div>
+										<div>Talia</div>
+										<div className="my-4">&</div>
+										<div>AJ</div>
+									</div>
+								}
+							/>{" "}
+							<img src="../static/Talia.jpg" />
 						</SwiperSlide>
 						<SwiperSlide
 							style={{
@@ -118,19 +209,30 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 								textAlign: "center",
 							}}
 						>
-							{" "}
-							<img src="../static/acrobat.jpg" />
+							<ImageListItemBar
+								sx={{
+									backgroundColor: "transparent",
+									"& .MuiImageListItemBar-title": {
+										fontWeight: "bold",
+										color: "#0f172a",
+										fontFamily: "latienne-pro",
+										fontSize: "50px",
+										textShadow: ".25px .25px .25px #ba9467",
+
+										paddingBottom: 5,
+										paddingTop: 1,
+									},
+								}}
+								title={
+									<div>
+										<div>Conner</div>
+										<div className="my-1">&</div>
+										<div>Meredith</div>
+									</div>
+								}
+							/>{" "}
+							<img src="../static/Connor.jpg" />
 						</SwiperSlide>
-						<SwiperSlide
-							style={{
-								display: "flex",
-								justifyContent: "center",
-								textAlign: "center",
-							}}
-						>
-							{" "}
-							<img src="../static/eric.jpg" />
-						</SwiperSlide>{" "}
 					</Swiper>
 				</div>
 			</div>
