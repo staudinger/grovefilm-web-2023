@@ -7,6 +7,7 @@ import "@fontsource/poppins";
 import { Email, Smartphone } from "@mui/icons-material";
 import NavBar from "@/components/NavBar";
 import PageTransition from "@/components/PageTransition";
+import Logo from "@/components/Logo";
 
 const Contact = (ref: React.ForwardedRef<HTMLDivElement>) => {
 	const theme = createTheme({
@@ -30,7 +31,7 @@ const Contact = (ref: React.ForwardedRef<HTMLDivElement>) => {
 					{/* <div className=" -my-14 mx-2 flex justify-center items-center">
 						<img src="../../static/GFSquareOrange.PNG" />
 					</div> */}
-					<div className="flex justify-center">
+					{/* <div className="flex justify-center">
 						<div
 							style={{
 								color: "#ba9467",
@@ -60,7 +61,8 @@ const Contact = (ref: React.ForwardedRef<HTMLDivElement>) => {
 						>
 							lm
 						</div>
-					</div>
+					</div> */}
+					<Logo />
 					{/* <div className="ml-6 -mt-1 grid grid-cols-2"> */}
 					<div className="-mt-1">
 						{/* <div className="col-start-1 col-span-2 flex justify-center"> */}
@@ -168,7 +170,7 @@ const Contact = (ref: React.ForwardedRef<HTMLDivElement>) => {
 						</div>
 					</div>{" "}
 					<div
-						className="text-white font-bold grid grid-cols-1"
+						className="text-white font-bold grid grid-cols-1 mx-8"
 						style={{ fontFamily: "Poppins" }}
 					>
 						<div>

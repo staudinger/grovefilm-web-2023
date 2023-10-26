@@ -3,9 +3,15 @@ import PageTransition from "@/components/PageTransition";
 import "@fontsource/poppins";
 import { Button } from "@mui/material";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const Splash = (ref: React.ForwardedRef<HTMLDivElement>) => {
+	const [desktop, setDesktop] = useState(
+		window.innerWidth > 1000 ? true : false
+	);
 	const router = useRouter();
+	setTimeout(() => router.push("/home"), 6000);
+
 	return (
 		<PageTransition ref={ref}>
 			<div className="h-screen">
@@ -17,7 +23,11 @@ const Splash = (ref: React.ForwardedRef<HTMLDivElement>) => {
 					className="w-full h-full -z-10 fixed object-cover"
 				>
 					<source
-						src="../../static/mobileReel.mp4"
+						src={
+							desktop
+								? "../../static/desktopReel.mp4"
+								: "../../static/mobileReel.mp4"
+						}
 						type="video/mp4"
 					/>
 				</video>

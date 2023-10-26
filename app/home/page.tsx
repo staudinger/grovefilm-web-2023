@@ -4,7 +4,7 @@ import NavBar from "@/components/NavBar";
 import { Fade } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import { Scrollbar, Mousewheel } from "swiper/modules";
@@ -24,9 +24,30 @@ import Logo from "@/components/Logo";
 const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 	const [checked, setChecked] = useState(false);
 
+	const [swiper, setSwiper] = useState(null);
 	const handleChange = () => {
 		//setChecked((prev) => !prev);
 	};
+
+	const videos = [
+		{
+			title: "Almery & Zach",
+			id: "877103688",
+		},
+		{ title: "Christina & Eric", id: "877111610" },
+		{
+			title: "Talia & AJ",
+			id: "877101187",
+		},
+		{
+			title: "Meridith & Connor",
+			id: "713488531",
+		},
+		{
+			title: "Bolts Brew Fest",
+			id: "877123147",
+		},
+	];
 
 	const router = useRouter();
 	return (
@@ -38,7 +59,7 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 						<img src="../../static/GFSquareOrange.PNG" />
 					</div>{" "} */}
 					<Logo />
-					<div className="flex justify-center items-center text-white mx-8 mb-14 ">
+					<div className="flex justify-center items-center text-white mx-8 mb-14 text-center">
 						<div style={{ fontFamily: "Poppins" }}>
 							We are Grovefilm. We are boutique film makers that
 							capture and create films to tell your stories.
@@ -47,34 +68,28 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 				</div>
 				<div className="justify-center items-center flex">
 					<Swiper
+						onInit={(swiper) => {
+							setSwiper(swiper);
+						}}
 						slidesPerView={1}
-						spaceBetween={10}
+						spaceBetween={18}
 						// using "ratio" endpoints
 						breakpoints={{
 							"@0.75": {
 								slidesPerView: 2,
-								spaceBetween: 20,
+								spaceBetween: 18,
 							},
 							"@1.00": {
 								slidesPerView: 3,
-								spaceBetween: 40,
+								spaceBetween: 18,
 							},
-							// "@1.50": {
-							// 	slidesPerView: 4,
-							// 	spaceBetween: 50,
-							// },
-							// "@2.00": {
-							// 	slidesPerView: 4,
-							// 	spaceBetween: 60,
-							// },
 						}}
-						modules={[Scrollbar, Mousewheel]}
+						modules={[Mousewheel]}
 						mousewheel={true}
-						scrollbar={{ draggable: true }}
-						speed={600}
-						loop={true}
-						onClick={() => router.push("/project")}
-						// slidesPerView={"auto"}
+						speed={1000}
+						onClick={() => {
+							router.push("/" + videos[swiper.clickedIndex].id);
+						}}
 					>
 						<SwiperSlide
 							style={{
@@ -88,7 +103,10 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 								cols={2}
 							></ImageListItem> */}
 
-							<img src="../static/Almery.jpg" />
+							<img
+								src="../static/Almery.jpg"
+								className="rounded-2xl"
+							/>
 							<ImageListItemBar
 								sx={{
 									backgroundColor: "transparent",
@@ -165,9 +183,11 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 										<div>Eric</div>
 									</div>
 								}
-								subtitle="Wedding"
 							/>{" "}
-							<img src="../static/Christina.jpg" />
+							<img
+								src="../static/Christina.jpg"
+								className="rounded-2xl"
+							/>
 						</SwiperSlide>
 
 						<SwiperSlide
@@ -200,7 +220,10 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 									</div>
 								}
 							/>{" "}
-							<img src="../static/Talia.jpg" />
+							<img
+								src="../static/Talia.jpg"
+								className="rounded-2xl"
+							/>
 						</SwiperSlide>
 						<SwiperSlide
 							style={{
@@ -231,7 +254,44 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 									</div>
 								}
 							/>{" "}
-							<img src="../static/Connor.jpg" />
+							<img
+								src="../static/Connor.jpg"
+								className="rounded-2xl"
+							/>
+						</SwiperSlide>
+						<SwiperSlide
+							style={{
+								display: "flex",
+								justifyContent: "center",
+								textAlign: "center",
+							}}
+						>
+							<ImageListItemBar
+								sx={{
+									backgroundColor: "transparent",
+									"& .MuiImageListItemBar-title": {
+										fontWeight: "bold",
+										color: "#0f172a",
+										fontFamily: "latienne-pro",
+										fontSize: "50px",
+										textShadow: ".25px .25px .25px #ba9467",
+
+										paddingBottom: 5,
+										paddingTop: 1,
+									},
+								}}
+								title={
+									<div>
+										<div>Bolts</div>
+										<div className="my-3">Brew</div>
+										<div>Fest</div>
+									</div>
+								}
+							/>{" "}
+							<img
+								src="../static/stanley.jpg"
+								className="rounded-2xl"
+							/>
 						</SwiperSlide>
 					</Swiper>
 				</div>

@@ -1,6 +1,6 @@
 const Logo = () => {
 	return (
-		<div className="flex justify-center">
+		<div className="flex justify-center my-10">
 			<div
 				style={{
 					color: "#ba9467",
