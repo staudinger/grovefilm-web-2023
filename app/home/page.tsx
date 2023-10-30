@@ -3,13 +3,12 @@
 import NavBar from "@/components/NavBar";
 import { Fade } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import { useState } from "react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/scrollbar";
-import { Scrollbar, Mousewheel } from "swiper/modules";
+import { Scrollbar, Mousewheel, Autoplay } from "swiper/modules";
 import "@fontsource/poppins";
-import * as React from "react";
+import { useState, useContext } from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
@@ -20,32 +19,59 @@ import PageTransition from "@/components/PageTransition";
 import { Button } from "@mui/material";
 import { useRouter } from "next/navigation";
 import Logo from "@/components/Logo";
+import { ProjectContext } from "@/ProjectContext";
 
 const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 	const [checked, setChecked] = useState(false);
 
 	const [swiper, setSwiper] = useState(null);
-	const handleChange = () => {
-		//setChecked((prev) => !prev);
-	};
+	const projectCtx = useContext(ProjectContext);
 
 	const videos = [
 		{
 			title: "Almery & Zach",
 			id: "877103688",
+
+			location: "St. Pete Beach, FL",
+			venue: "The Don CeSar",
+			equipment: ["Panasonic S1H"],
+			type: "Wedding",
 		},
-		{ title: "Christina & Eric", id: "877111610" },
+		{
+			title: "Christina & Eric",
+			id: "877111610",
+			location: "Winter Park, CO",
+			venue: "Winter Park Resort",
+			equipment: ["Panasonic S1H", "DJI Air S2"],
+
+			type: "Wedding",
+		},
 		{
 			title: "Talia & AJ",
 			id: "877101187",
+			location: "St. Petersburg, FL",
+			venue: "The Birchwood / Sunken Gardens",
+			equipment: ["Panasonic S1H", "DJI Air S2"],
+
+			type: "Wedding",
 		},
 		{
 			title: "Meridith & Connor",
 			id: "713488531",
+			location: "Chicago, IL",
+			venue: "Green House Loft",
+			equipment: ["Panasonic S1H", "DJI Air S2"],
+
+			type: "Wedding",
 		},
 		{
 			title: "Bolts Brew Fest",
 			id: "877123147",
+			location: "Tampa, FL",
+			venue: "Amalie Arena",
+			equipment: ["Panasonic S1H", "DJI Air S2"],
+
+			type: "Commercial",
 		},
 	];
 
@@ -72,22 +98,28 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 							setSwiper(swiper);
 						}}
 						slidesPerView={1}
-						spaceBetween={18}
+						spaceBetween={25}
 						// using "ratio" endpoints
 						breakpoints={{
 							"@0.75": {
 								slidesPerView: 2,
-								spaceBetween: 18,
+								spaceBetween: 25,
 							},
 							"@1.00": {
 								slidesPerView: 3,
-								spaceBetween: 18,
+								spaceBetween: 25,
 							},
 						}}
-						modules={[Mousewheel]}
+						modules={[Mousewheel, Scrollbar, Autoplay]}
+						autoplay={{
+							delay: 2000,
+							disableOnInteraction: false,
+						}}
+						scrollbar={false}
 						mousewheel={true}
 						speed={1000}
 						onClick={() => {
+							projectCtx.setProject(videos[swiper.clickedIndex]);
 							router.push("/" + videos[swiper.clickedIndex].id);
 						}}
 					>
@@ -105,7 +137,7 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 
 							<img
 								src="../static/Almery.jpg"
-								className="rounded-2xl"
+								className="rounded-3xl"
 							/>
 							<ImageListItemBar
 								sx={{
@@ -186,7 +218,7 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 							/>{" "}
 							<img
 								src="../static/Christina.jpg"
-								className="rounded-2xl"
+								className="rounded-3xl"
 							/>
 						</SwiperSlide>
 
@@ -222,7 +254,7 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 							/>{" "}
 							<img
 								src="../static/Talia.jpg"
-								className="rounded-2xl"
+								className="rounded-3xl"
 							/>
 						</SwiperSlide>
 						<SwiperSlide
@@ -256,7 +288,7 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 							/>{" "}
 							<img
 								src="../static/Connor.jpg"
-								className="rounded-2xl"
+								className="rounded-3xl"
 							/>
 						</SwiperSlide>
 						<SwiperSlide
@@ -290,7 +322,7 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 							/>{" "}
 							<img
 								src="../static/stanley.jpg"
-								className="rounded-2xl"
+								className="rounded-3xl"
 							/>
 						</SwiperSlide>
 					</Swiper>

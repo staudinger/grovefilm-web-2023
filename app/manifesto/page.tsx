@@ -46,14 +46,14 @@ const Manifesto = (ref: React.ForwardedRef<HTMLDivElement>) => {
 						}}
 						className="mx-8 absolute font-bold h-full flex justify-center items-center lg:mx-80"
 					>
-						It’s the scent of the air, cool in the sun-kissed sky.
-						The chorus that takes you back. The emotion when
-						returning home. Your story is weaved with these moments
-						of memory and family and love. Grovefilm is here to tell
-						this story. This is our purpose and why we believe that
-						every project is an opportunity to create meaning. To
-						relive the moments we never want to forget. &mdash;
-						Peter Staudinger, Founder.
+						It’s the cool air in the sun-kissed sky. It's a song
+						that takes you back. It's the feeling of returning home.
+						Your story is weaved with these moments of memory and
+						family and love. Grovefilm is here to tell the story.
+						This is our purpose and why we believe that every
+						project is an opportunity to create meaning. To relive
+						the moments we never want to forget. &mdash; Peter
+						Staudinger, Founder.
 					</div>
 				</div>
 			</div>
