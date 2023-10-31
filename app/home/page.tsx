@@ -81,9 +81,7 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 			<div className="bg-slate-900 h-screen">
 				<div className="grid grid-col-1">
 					<NavBar />
-					{/* <div className=" -my-14 mx-2 flex justify-center items-center">
-						<img src="../../static/GFSquareOrange.PNG" />
-					</div>{" "} */}
+
 					<Logo />
 					<div className="flex justify-center items-center text-white mx-8 mb-14 text-center">
 						<div style={{ fontFamily: "Poppins" }}>
@@ -111,10 +109,10 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 							},
 						}}
 						modules={[Mousewheel, Scrollbar, Autoplay]}
-						autoplay={{
-							delay: 2000,
-							disableOnInteraction: false,
-						}}
+						// autoplay={{
+						// 	delay: 2000,
+						// 	disableOnInteraction: false,
+						// }}
 						scrollbar={false}
 						mousewheel={true}
 						speed={1000}
@@ -130,60 +128,22 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 								textAlign: "center",
 							}}
 						>
-							{/* <ImageListItem
-								key="Subheader"
-								cols={2}
-							></ImageListItem> */}
-
 							<img
 								src="../static/Almery.jpg"
 								className="rounded-3xl"
 							/>
-							<ImageListItemBar
-								sx={{
-									backgroundColor: "transparent",
-									"& .MuiImageListItemBar-title": {
-										fontWeight: "bold",
-										color: "#0f172a",
-										// color: "black",
-
-										fontFamily: "latienne-pro",
-										fontSize: "55px",
-										textShadow: ".25px .25px .25px #ba9467",
-										paddingBottom: 60,
-										paddingTop: 1,
-
-										// paddingBottom: 1,
-										// display: "flex",
-									},
-									// "& .MuiImageListItemBar-subtitle": {
-									// 	fontWeight: "bold",
-									// 	color: "#0f172a",
-									// 	fontFamily: "Poppins",
-									// 	fontSize: "18px",
-									// 	paddingTop: 2,
-									// 	paddingBottom: 60,
-									// 	// textShadow: ".5px .5px .55px black",
-									// 	display: "flex",
-									// },
+							<div
+								style={{
+									textShadow: ".25px .25px .25px #ba9467",
 								}}
-								title={
-									<div>
-										<div>Almery</div>
-										<div className="my-2">&</div>
-										<div>Zach</div>
-									</div>
-								}
-								// subtitle="Wedding"
-								// actionIcon={
-								// 	<IconButton
-								// 		sx={{ color: "rgba(255, 255, 255, 0.54)" }}
-								// 	>
-								// 		<InfoIcon />
-								// 	</IconButton>
-								// }
-							/>
+								className=" absolute z-10 text-6xl font-latienne-pro font-bold text-slate-900 mt-12"
+							>
+								<div>Almery</div>
+								<div className="-my-5">&</div>
+								<div>Zach</div>
+							</div>
 						</SwiperSlide>
+						6
 						<SwiperSlide
 							style={{
 								display: "flex",
@@ -191,37 +151,21 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 								textAlign: "center",
 							}}
 						>
-							<ImageListItemBar
-								sx={{
-									backgroundColor: "transparent",
-									"& .MuiImageListItemBar-title": {
-										fontWeight: "bold",
-										// color: "#ba9467",
-										color: "#0f172a",
-										fontFamily: "latienne-pro",
-										fontSize: "55px",
-										textShadow: ".25px .25px .25px #ba9467",
-										//textShadow: "1px 1px 1px #0f172a",
-
-										paddingBottom: 55,
-										paddingTop: 2,
-										// display: "flex",
-									},
+							<div
+								style={{
+									textShadow: ".25px .25px .25px #ba9467",
 								}}
-								title={
-									<div>
-										<div>Christina</div>
-										<div className="my-3">&</div>
-										<div>Eric</div>
-									</div>
-								}
-							/>{" "}
+								className=" absolute z-10 text-6xl font-latienne-pro font-bold text-slate-900 mt-12"
+							>
+								<div>Christina</div>
+								<div className="-my-4">&</div>
+								<div>Eric</div>
+							</div>
 							<img
 								src="../static/Christina.jpg"
 								className="rounded-3xl"
 							/>
 						</SwiperSlide>
-
 						<SwiperSlide
 							style={{
 								display: "flex",
@@ -229,29 +173,16 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 								textAlign: "center",
 							}}
 						>
-							<ImageListItemBar
-								sx={{
-									backgroundColor: "transparent",
-									"& .MuiImageListItemBar-title": {
-										fontWeight: "bold",
-										color: "#0f172a",
-										fontFamily: "latienne-pro",
-										fontSize: "60px",
-										textShadow: ".25px .25px .25px #ba9467",
-										// textShadow: "1px 1px 1px #ba9467",
-										paddingBottom: 55,
-										paddingTop: 2,
-									},
+							<div
+								style={{
+									textShadow: ".25px .25px .25px #ba9467",
 								}}
-								// title="Talia & AJ"
-								title={
-									<div>
-										<div>Talia</div>
-										<div className="my-4">&</div>
-										<div>AJ</div>
-									</div>
-								}
-							/>{" "}
+								className=" absolute z-10 text-6xl font-latienne-pro font-bold text-slate-900 mt-12"
+							>
+								<div>Talia</div>
+								<div className="-my-4">&</div>
+								<div>AJ</div>
+							</div>
 							<img
 								src="../static/Talia.jpg"
 								className="rounded-3xl"
@@ -264,28 +195,16 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 								textAlign: "center",
 							}}
 						>
-							<ImageListItemBar
-								sx={{
-									backgroundColor: "transparent",
-									"& .MuiImageListItemBar-title": {
-										fontWeight: "bold",
-										color: "#0f172a",
-										fontFamily: "latienne-pro",
-										fontSize: "50px",
-										textShadow: ".25px .25px .25px #ba9467",
-
-										paddingBottom: 5,
-										paddingTop: 1,
-									},
+							<div
+								style={{
+									textShadow: ".25px .25px .25px #ba9467",
 								}}
-								title={
-									<div>
-										<div>Conner</div>
-										<div className="my-1">&</div>
-										<div>Meredith</div>
-									</div>
-								}
-							/>{" "}
+								className=" absolute z-10 text-6xl font-latienne-pro font-bold text-slate-900 mt-12"
+							>
+								<div>Meredith</div>
+								<div className="-my-5">&</div>
+								<div>Connor</div>
+							</div>
 							<img
 								src="../static/Connor.jpg"
 								className="rounded-3xl"
@@ -298,28 +217,22 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 								textAlign: "center",
 							}}
 						>
-							<ImageListItemBar
-								sx={{
-									backgroundColor: "transparent",
-									"& .MuiImageListItemBar-title": {
-										fontWeight: "bold",
-										color: "#0f172a",
-										fontFamily: "latienne-pro",
-										fontSize: "50px",
-										textShadow: ".25px .25px .25px #ba9467",
-
-										paddingBottom: 5,
-										paddingTop: 1,
-									},
+							<div
+								style={{
+									textShadow: ".25px .25px .25px #ba9467",
 								}}
-								title={
-									<div>
-										<div>Bolts</div>
-										<div className="my-3">Brew</div>
-										<div>Fest</div>
-									</div>
-								}
-							/>{" "}
+								className=" absolute text-6xl font-latienne-pro font-bold text-slate-900 mt-12 flex flex-col h-full flex-nowrap w-full"
+							>
+								<div className="justify-center items-end flex h-3/5">
+									Bolts
+								</div>
+								<div className="justify-center items-start flex -m-4">
+									Brew
+								</div>
+								<div className="justify-center items-start flex ">
+									Fest
+								</div>
+							</div>
 							<img
 								src="../static/stanley.jpg"
 								className="rounded-3xl"
