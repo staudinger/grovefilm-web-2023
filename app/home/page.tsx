@@ -21,10 +21,10 @@ import { useRouter } from "next/navigation";
 import Logo from "@/components/Logo";
 import { ProjectContext } from "@/ProjectContext";
 
-const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
+const Home = () => {
 	const [checked, setChecked] = useState(false);
 
-	const [swiper, setSwiper] = useState(null);
+	const [swiper, setSwiper] = useState<any>(null);
 	const projectCtx = useContext(ProjectContext);
 
 	const videos = [
@@ -77,7 +77,7 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 
 	const router = useRouter();
 	return (
-		<PageTransition ref={ref}>
+		<PageTransition>
 			<div className="bg-slate-900 h-screen">
 				<div className="grid grid-col-1">
 					<NavBar />
@@ -109,10 +109,10 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 							},
 						}}
 						modules={[Mousewheel, Scrollbar, Autoplay]}
-						// autoplay={{
-						// 	delay: 2000,
-						// 	disableOnInteraction: false,
-						// }}
+						autoplay={{
+							delay: 2000,
+							disableOnInteraction: false,
+						}}
 						scrollbar={false}
 						mousewheel={true}
 						speed={1000}
@@ -221,7 +221,7 @@ const Home = (ref: React.ForwardedRef<HTMLDivElement>) => {
 								style={{
 									textShadow: ".25px .25px .25px #ba9467",
 								}}
-								className=" absolute text-6xl font-latienne-pro font-bold text-slate-900 mt-12 flex flex-col h-full flex-nowrap w-full"
+								className=" absolute text-6xl font-latienne-pro font-bold text-slate-900 mt-12 flex flex-col h-full"
 							>
 								<div className="justify-center items-end flex h-3/5">
 									Bolts

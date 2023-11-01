@@ -6,13 +6,13 @@ import PageTransition from "@/components/PageTransition";
 import "@fontsource/poppins";
 import { useEffect, useState } from "react";
 
-const Manifesto = (ref: React.ForwardedRef<HTMLDivElement>) => {
-	const [desktop, setDesktop] = useState(
-		window.innerWidth > 1000 ? true : false
-	);
+const Manifesto = () => {
+	// const [desktop, setDesktop] = useState(
+	// typeof window !== "undefined" && window.innerWidth > 767.98
+	// );
 
 	return (
-		<PageTransition ref={ref}>
+		<PageTransition>
 			<div className="bg-slate-900 h-screen">
 				<NavBar />
 
@@ -29,7 +29,7 @@ const Manifesto = (ref: React.ForwardedRef<HTMLDivElement>) => {
 					>
 						<source
 							src={
-								desktop
+								true
 									? "../../static/desktopReel.mp4"
 									: "../../static/mobileReel.mp4"
 							}

@@ -13,7 +13,7 @@ export const ProjectContext = createContext({
 	setProject: (project: {}) => {},
 });
 
-const ProjectContextProvider = ({ children }) => {
+const ProjectContextProvider = ({ children }: any) => {
 	const [project, setProject] = useState({
 		id: "",
 		title: "",
@@ -23,7 +23,7 @@ const ProjectContextProvider = ({ children }) => {
 		type: "",
 	});
 
-	const value = {
+	const value: any = {
 		project: project,
 		setProject: setProject,
 	};

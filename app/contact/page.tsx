@@ -16,9 +16,9 @@ import emailjs from "@emailjs/browser";
 import { useState, useRef } from "react";
 import { setDoc, doc, getFirestore } from "firebase/firestore";
 
-const Contact = (ref: React.ForwardedRef<HTMLDivElement>) => {
+const Contact = () => {
 	//const db = getFirestore();
-	const form = useRef();
+	const form: any = useRef();
 
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
@@ -27,26 +27,26 @@ const Contact = (ref: React.ForwardedRef<HTMLDivElement>) => {
 	const [location, setLocation] = useState("");
 	const [date, setDate] = useState(Date.now().toString());
 
-	const handleName = (e) => {
+	const handleName = (e: any) => {
 		setName(e.target.value);
 	};
-	const handleEmail = (e) => {
+	const handleEmail = (e: any) => {
 		setEmail(e.target.value);
 	};
-	const handlePhone = (e) => {
+	const handlePhone = (e: any) => {
 		setPhone(e.target.value);
 	};
-	const handleMessage = (e) => {
+	const handleMessage = (e: any) => {
 		setMessage(e.target.value);
 	};
-	const handleLocation = (e) => {
+	const handleLocation = (e: any) => {
 		setLocation(e.target.value);
 	};
-	const handleDate = (e) => {
+	const handleDate = (e: any) => {
 		setDate(e.$M + 1 + "/" + e.$D + "/" + e.$y);
 	};
 
-	const sendMessage = async (e) => {
+	const sendMessage = async (e: any) => {
 		e.preventDefault();
 
 		emailjs
@@ -117,7 +117,7 @@ const Contact = (ref: React.ForwardedRef<HTMLDivElement>) => {
 		},
 	});
 	return (
-		<PageTransition ref={ref}>
+		<PageTransition>
 			<LocalizationProvider dateAdapter={AdapterDayjs}>
 				<div className="bg-slate-900 h-screen">
 					<ThemeProvider theme={theme}>

@@ -38,13 +38,13 @@ function HideOnScroll(props: Props) {
 	);
 }
 
-export default function NavBar(props: Props) {
+export default function NavBar() {
 	const router = useRouter();
 
 	return (
 		<React.Fragment>
 			<CssBaseline />
-			<HideOnScroll {...props}>
+			<HideOnScroll>
 				<AppBar color="transparent">
 					<Toolbar>
 						<Button

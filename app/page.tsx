@@ -7,17 +7,17 @@ import { Button } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const Splash = (ref: React.ForwardedRef<HTMLDivElement>) => {
-	const isDesktop =
-		typeof window !== "undefined" && window.innerWidth > 767.98;
-	console.log(isDesktop);
+const Splash = () => {
+	// const isDesktop =
+	// 	typeof window !== "undefined" && window.innerWidth > 767.98;
+	// console.log(isDesktop);
 
 	const router = useRouter();
 
 	setTimeout(() => router.push("/home"), 6000);
 
 	return (
-		<PageTransition ref={ref}>
+		<PageTransition>
 			<div className="h-screen">
 				<video
 					autoPlay
