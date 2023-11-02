@@ -143,7 +143,6 @@ const Home = () => {
 								<div>Zach</div>
 							</div>
 						</SwiperSlide>
-						6
 						<SwiperSlide
 							style={{
 								display: "flex",

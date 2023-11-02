@@ -7,9 +7,9 @@ import "@fontsource/poppins";
 import { useEffect, useState } from "react";
 
 const Manifesto = () => {
-	// const [desktop, setDesktop] = useState(
-	// typeof window !== "undefined" && window.innerWidth > 767.98
-	// );
+	const [desktop, setDesktop] = useState(
+		typeof window !== "undefined" && window.innerWidth > 767.98
+	);
 
 	return (
 		<PageTransition>
@@ -29,7 +29,7 @@ const Manifesto = () => {
 					>
 						<source
 							src={
-								true
+								desktop
 									? "../../static/desktopReel.mp4"
 									: "../../static/mobileReel.mp4"
 							}
