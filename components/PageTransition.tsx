@@ -10,7 +10,7 @@ function PageTransition(
 ) {
 	const onTheRight = { x: "100%" };
 	const onTheBottom = { y: "100%" };
-	const inTheCenter = { y: 0 };
+	const inTheCenter = { x: 0 };
 	const onTheLeft = { x: "-100%" };
 	const onTheTop = { y: "50%" };
 
@@ -19,9 +19,9 @@ function PageTransition(
 	return (
 		<motion.div
 			ref={ref}
-			initial={onTheBottom}
+			initial={onTheRight}
 			animate={inTheCenter}
-			exit={onTheTop}
+			exit={onTheLeft}
 			transition={transition}
 			{...rest}
 		>
