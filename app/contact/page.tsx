@@ -117,15 +117,15 @@ const Contact = () => {
 		},
 	});
 	return (
-		<PageTransition>
-			<LocalizationProvider dateAdapter={AdapterDayjs}>
-				<div className="bg-slate-900 h-screen">
-					<ThemeProvider theme={theme}>
-						<NavBar />
-						{/* <div className=" -my-14 mx-2 flex justify-center items-center">
+		// <PageTransition>
+		<LocalizationProvider dateAdapter={AdapterDayjs}>
+			<div className="bg-slate-900 h-screen">
+				<ThemeProvider theme={theme}>
+					<NavBar />
+					{/* <div className=" -my-14 mx-2 flex justify-center items-center">
 						<img src="../../static/GFSquareOrange.PNG" />
 					</div> */}
-						{/* <div className="flex justify-center">
+					{/* <div className="flex justify-center">
 						<div
 							style={{
 								color: "#ba9467",
@@ -156,198 +156,194 @@ const Contact = () => {
 							lm
 						</div>
 					</div> */}
-						<Logo />
-						{/* <div className="ml-6 -mt-1 grid grid-cols-2"> */}
-						<div className="-mt-1">
-							{/* <div className="col-start-1 col-span-2 flex justify-center"> */}
-							<form ref={form} onSubmit={sendMessage}>
-								<div className="flex justify-center">
-									<TextField
-										name="name"
-										sx={{
-											input: {
-												color: "#ba9467",
-												fontFamily: "Poppins",
-											},
+					<Logo />
+					{/* <div className="ml-6 -mt-1 grid grid-cols-2"> */}
+					<div className="-mt-1">
+						{/* <div className="col-start-1 col-span-2 flex justify-center"> */}
+						<form ref={form} onSubmit={sendMessage}>
+							<div className="flex justify-center">
+								<TextField
+									name="name"
+									sx={{
+										input: {
+											color: "#ba9467",
+											fontFamily: "Poppins",
+										},
 
-											"& .MuiInputLabel-root": {
-												color: "white",
-												fontFamily: "Poppins",
-											},
-											"& .MuiInput-underline:before": {
-												borderBottomColor: "white",
-											},
-										}}
-										color="primary"
-										id="standard-basic"
-										label="Name"
-										variant="standard"
-										onChange={handleName}
-										value={name}
-									/>
-								</div>
-								<div className="flex justify-center">
-									<TextField
-										name="email"
-										sx={{
-											input: {
-												color: "#ba9467",
-												fontFamily: "Poppins",
-											},
-
-											"& .MuiInputLabel-root": {
-												color: "white",
-												fontFamily: "Poppins",
-											},
-											"& .MuiInput-underline:before": {
-												borderBottomColor: "white",
-											},
-										}}
-										color="primary"
-										id="standard-basic"
-										label="Email"
-										variant="standard"
-										onChange={handleEmail}
-										value={email}
-									/>
-								</div>
-								<div className="flex justify-center">
-									<TextField
-										name="phone"
-										sx={{
-											input: {
-												color: "#ba9467",
-												fontFamily: "Poppins",
-											},
-
-											"& .MuiInputLabel-root": {
-												color: "white",
-												fontFamily: "Poppins",
-											},
-											"& .MuiInput-underline:before": {
-												borderBottomColor: "white",
-											},
-										}}
-										color="primary"
-										id="standard-basic"
-										label="Phone"
-										variant="standard"
-										onChange={handlePhone}
-										value={phone}
-									/>
-								</div>
-								<div className="flex justify-center">
-									<TextField
-										name="location"
-										sx={{
-											input: {
-												color: "#ba9467",
-												fontFamily: "Poppins",
-											},
-
-											"& .MuiInputLabel-root": {
-												color: "white",
-												fontFamily: "Poppins",
-											},
-											"& .MuiInput-underline:before": {
-												borderBottomColor: "white",
-											},
-										}}
-										color="primary"
-										id="standard-basic"
-										label="Event Location"
-										variant="standard"
-										placeholder="Tampa, FL"
-										onChange={handleLocation}
-										value={location}
-									/>
-								</div>
-								<div className="flex justify-center mt-8">
-									<MobileDatePicker
-										sx={{
-											input: {
-												color: "#ba9467",
-												fontFamily: "Poppins",
-											},
-											"& .MuiInputLabel-root ": {
-												color: "white",
-												fontFamily: "Poppins",
-											},
-											"& .MuiOutlinedInput-root": {
-												"& fieldset": {
-													borderColor: "white",
-												},
-											},
-										}}
-										defaultValue={dayjs(Date.now())}
-										closeOnSelect
-										label="Event Date"
-										onChange={handleDate}
-										slotProps={{
-											textField: { name: "date" },
-										}}
-									/>
-								</div>
-								<div
-									className="flex justify-center
-							text-4xl mt-4 tracking-tight"
-									style={{
-										color: "#ba9467",
-										fontFamily: "Poppins",
+										"& .MuiInputLabel-root": {
+											color: "white",
+											fontFamily: "Poppins",
+										},
+										"& .MuiInput-underline:before": {
+											borderBottomColor: "white",
+										},
 									}}
-								>
-									Dear Grovefilm,
-								</div>
-								<div className="flex justify-center">
-									<TextField
-										name="message"
-										sx={{
-											width: "250px",
+									color="primary"
+									id="standard-basic"
+									label="Name"
+									variant="standard"
+									onChange={handleName}
+									value={name}
+								/>
+							</div>
+							<div className="flex justify-center">
+								<TextField
+									name="email"
+									sx={{
+										input: {
+											color: "#ba9467",
+											fontFamily: "Poppins",
+										},
 
-											"& .MuiInput-underline:before": {
-												borderBottomColor: "white",
-											},
-											"& .MuiInput-input": {
-												color: "#ba9467",
-												fontFamily: "Poppins",
-											},
-										}}
-										color="primary"
-										id="standard-basic"
-										label=""
-										placeholder="Drop us a line..."
-										variant="standard"
-										multiline
-										onChange={handleMessage}
-										value={message}
-									/>
-								</div>
-								<div className="mb-12 flex justify-center">
-									<Button
-										sx={{}}
-										variant="text"
-										type="submit"
-									>
-										Send Email
-									</Button>
-								</div>
-							</form>
-						</div>{" "}
-						<div
-							className="text-white font-bold grid grid-cols-1 mx-8"
-							style={{ fontFamily: "Poppins" }}
-						>
-							<div>
-								<Email /> &mdash; peter@grovefilm.com
+										"& .MuiInputLabel-root": {
+											color: "white",
+											fontFamily: "Poppins",
+										},
+										"& .MuiInput-underline:before": {
+											borderBottomColor: "white",
+										},
+									}}
+									color="primary"
+									id="standard-basic"
+									label="Email"
+									variant="standard"
+									onChange={handleEmail}
+									value={email}
+								/>
 							</div>
-							<div>
-								<Smartphone /> &mdash; 863 207 8684
+							<div className="flex justify-center">
+								<TextField
+									name="phone"
+									sx={{
+										input: {
+											color: "#ba9467",
+											fontFamily: "Poppins",
+										},
+
+										"& .MuiInputLabel-root": {
+											color: "white",
+											fontFamily: "Poppins",
+										},
+										"& .MuiInput-underline:before": {
+											borderBottomColor: "white",
+										},
+									}}
+									color="primary"
+									id="standard-basic"
+									label="Phone"
+									variant="standard"
+									onChange={handlePhone}
+									value={phone}
+								/>
 							</div>
+							<div className="flex justify-center">
+								<TextField
+									name="location"
+									sx={{
+										input: {
+											color: "#ba9467",
+											fontFamily: "Poppins",
+										},
+
+										"& .MuiInputLabel-root": {
+											color: "white",
+											fontFamily: "Poppins",
+										},
+										"& .MuiInput-underline:before": {
+											borderBottomColor: "white",
+										},
+									}}
+									color="primary"
+									id="standard-basic"
+									label="Event Location"
+									variant="standard"
+									placeholder="Tampa, FL"
+									onChange={handleLocation}
+									value={location}
+								/>
+							</div>
+							<div className="flex justify-center mt-8">
+								<MobileDatePicker
+									sx={{
+										input: {
+											color: "#ba9467",
+											fontFamily: "Poppins",
+										},
+										"& .MuiInputLabel-root ": {
+											color: "white",
+											fontFamily: "Poppins",
+										},
+										"& .MuiOutlinedInput-root": {
+											"& fieldset": {
+												borderColor: "white",
+											},
+										},
+									}}
+									defaultValue={dayjs(Date.now())}
+									closeOnSelect
+									label="Event Date"
+									onChange={handleDate}
+									slotProps={{
+										textField: { name: "date" },
+									}}
+								/>
+							</div>
+							<div
+								className="flex justify-center
+							text-4xl mt-4 tracking-tight"
+								style={{
+									color: "#ba9467",
+									fontFamily: "Poppins",
+								}}
+							>
+								Dear Grovefilm,
+							</div>
+							<div className="flex justify-center">
+								<TextField
+									name="message"
+									sx={{
+										width: "250px",
+
+										"& .MuiInput-underline:before": {
+											borderBottomColor: "white",
+										},
+										"& .MuiInput-input": {
+											color: "#ba9467",
+											fontFamily: "Poppins",
+										},
+									}}
+									color="primary"
+									id="standard-basic"
+									label=""
+									placeholder="Drop us a line..."
+									variant="standard"
+									multiline
+									onChange={handleMessage}
+									value={message}
+								/>
+							</div>
+							<div className="mb-12 flex justify-center">
+								<Button sx={{}} variant="text" type="submit">
+									Send Email
+								</Button>
+							</div>
+						</form>
+					</div>{" "}
+					<div
+						className="text-white font-bold grid grid-cols-1 mx-8"
+						style={{ fontFamily: "Poppins" }}
+					>
+						<div>
+							<Email /> &mdash; peter@grovefilm.com
 						</div>
-					</ThemeProvider>
-				</div>
-			</LocalizationProvider>
-		</PageTransition>
+						<div>
+							<Smartphone /> &mdash; 863 207 8684
+						</div>
+					</div>
+				</ThemeProvider>
+			</div>
+		</LocalizationProvider>
+		// </PageTransition>
 	);
 };
 

@@ -9,10 +9,8 @@ function PageTransition(
 	ref: PageTransitionRef
 ) {
 	const onTheRight = { x: "100%" };
-	const onTheBottom = { y: "100%" };
 	const inTheCenter = { x: 0 };
 	const onTheLeft = { x: "-100%" };
-	const onTheTop = { y: "50%" };
 
 	const transition = { duration: 0.6, ease: "easeInOut" };
 
@@ -24,6 +22,7 @@ function PageTransition(
 			exit={onTheLeft}
 			transition={transition}
 			{...rest}
+			style={{ maxHeight: "100%", overflowY: "auto", overflowX: "auto" }}
 		>
 			{children}
 		</motion.div>

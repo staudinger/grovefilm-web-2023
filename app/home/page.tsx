@@ -77,170 +77,170 @@ const Home = () => {
 
 	const router = useRouter();
 	return (
-		<PageTransition>
-			<div className="bg-slate-900 h-screen">
-				<div className="grid grid-col-1">
-					<NavBar />
+		// <PageTransition>
+		<div className="bg-slate-900 h-screen">
+			<div className="grid grid-col-1">
+				<NavBar />
 
-					<Logo />
-					<div className="flex justify-center items-center text-white mx-8 mb-14 text-center">
-						<div style={{ fontFamily: "Poppins" }}>
-							We are Grovefilm. We are boutique film makers that
-							capture and create films to tell your stories.
-						</div>
+				<Logo />
+				<div className="flex justify-center items-center text-white mx-8 mb-14 text-center">
+					<div style={{ fontFamily: "Poppins" }}>
+						We are Grovefilm. We are boutique film makers that
+						capture and create films to tell your stories.
 					</div>
 				</div>
-				<div className="justify-center items-center flex">
-					<Swiper
-						onInit={(swiper) => {
-							setSwiper(swiper);
-						}}
-						slidesPerView={1}
-						spaceBetween={25}
-						// using "ratio" endpoints
-						breakpoints={{
-							"@0.75": {
-								slidesPerView: 2,
-								spaceBetween: 25,
-							},
-							"@1.00": {
-								slidesPerView: 3,
-								spaceBetween: 25,
-							},
-						}}
-						modules={[Mousewheel, Scrollbar, Autoplay]}
-						autoplay={{
-							delay: 2000,
-							disableOnInteraction: false,
-						}}
-						scrollbar={false}
-						mousewheel={true}
-						speed={1000}
-						onClick={() => {
-							projectCtx.setProject(videos[swiper.clickedIndex]);
-							router.push("/" + videos[swiper.clickedIndex].id);
+			</div>
+			<div className="justify-center items-center flex">
+				<Swiper
+					onInit={(swiper) => {
+						setSwiper(swiper);
+					}}
+					slidesPerView={1}
+					spaceBetween={25}
+					// using "ratio" endpoints
+					breakpoints={{
+						"@0.75": {
+							slidesPerView: 2,
+							spaceBetween: 25,
+						},
+						"@1.00": {
+							slidesPerView: 3,
+							spaceBetween: 25,
+						},
+					}}
+					modules={[Mousewheel, Scrollbar, Autoplay]}
+					autoplay={{
+						delay: 2000,
+						disableOnInteraction: false,
+					}}
+					scrollbar={false}
+					mousewheel={true}
+					speed={1000}
+					onClick={() => {
+						projectCtx.setProject(videos[swiper.clickedIndex]);
+						router.push("/" + videos[swiper.clickedIndex].id);
+					}}
+				>
+					<SwiperSlide
+						style={{
+							display: "flex",
+							justifyContent: "center",
+							textAlign: "center",
 						}}
 					>
-						<SwiperSlide
+						<img
+							src="../static/Almery.jpg"
+							className="rounded-3xl"
+						/>
+						<div
 							style={{
-								display: "flex",
-								justifyContent: "center",
-								textAlign: "center",
+								textShadow: ".25px .25px .25px #ba9467",
 							}}
+							className=" absolute z-10 text-6xl font-latienne-pro font-bold text-slate-900 mt-12"
 						>
-							<img
-								src="../static/Almery.jpg"
-								className="rounded-3xl"
-							/>
-							<div
-								style={{
-									textShadow: ".25px .25px .25px #ba9467",
-								}}
-								className=" absolute z-10 text-6xl font-latienne-pro font-bold text-slate-900 mt-12"
-							>
-								<div>Almery</div>
-								<div className="-my-5">&</div>
-								<div>Zach</div>
-							</div>
-						</SwiperSlide>
-						<SwiperSlide
+							<div>Almery</div>
+							<div className="-my-5">&</div>
+							<div>Zach</div>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide
+						style={{
+							display: "flex",
+							justifyContent: "center",
+							textAlign: "center",
+						}}
+					>
+						<div
 							style={{
-								display: "flex",
-								justifyContent: "center",
-								textAlign: "center",
+								textShadow: ".25px .25px .25px #ba9467",
 							}}
+							className=" absolute z-10 text-6xl font-latienne-pro font-bold text-slate-900 mt-12"
 						>
-							<div
-								style={{
-									textShadow: ".25px .25px .25px #ba9467",
-								}}
-								className=" absolute z-10 text-6xl font-latienne-pro font-bold text-slate-900 mt-12"
-							>
-								<div>Christina</div>
-								<div className="-my-4">&</div>
-								<div>Eric</div>
-							</div>
-							<img
-								src="../static/Christina.jpg"
-								className="rounded-3xl"
-							/>
-						</SwiperSlide>
-						<SwiperSlide
+							<div>Christina</div>
+							<div className="-my-4">&</div>
+							<div>Eric</div>
+						</div>
+						<img
+							src="../static/Christina.jpg"
+							className="rounded-3xl"
+						/>
+					</SwiperSlide>
+					<SwiperSlide
+						style={{
+							display: "flex",
+							justifyContent: "center",
+							textAlign: "center",
+						}}
+					>
+						<div
 							style={{
-								display: "flex",
-								justifyContent: "center",
-								textAlign: "center",
+								textShadow: ".25px .25px .25px #ba9467",
 							}}
+							className=" absolute z-10 text-6xl font-latienne-pro font-bold text-slate-900 mt-12"
 						>
-							<div
-								style={{
-									textShadow: ".25px .25px .25px #ba9467",
-								}}
-								className=" absolute z-10 text-6xl font-latienne-pro font-bold text-slate-900 mt-12"
-							>
-								<div>Talia</div>
-								<div className="-my-4">&</div>
-								<div>AJ</div>
-							</div>
-							<img
-								src="../static/Talia.jpg"
-								className="rounded-3xl"
-							/>
-						</SwiperSlide>
-						<SwiperSlide
+							<div>Talia</div>
+							<div className="-my-4">&</div>
+							<div>AJ</div>
+						</div>
+						<img
+							src="../static/Talia.jpg"
+							className="rounded-3xl"
+						/>
+					</SwiperSlide>
+					<SwiperSlide
+						style={{
+							display: "flex",
+							justifyContent: "center",
+							textAlign: "center",
+						}}
+					>
+						<div
 							style={{
-								display: "flex",
-								justifyContent: "center",
-								textAlign: "center",
+								textShadow: ".25px .25px .25px #ba9467",
 							}}
+							className=" absolute z-10 text-6xl font-latienne-pro font-bold text-slate-900 mt-12"
 						>
-							<div
-								style={{
-									textShadow: ".25px .25px .25px #ba9467",
-								}}
-								className=" absolute z-10 text-6xl font-latienne-pro font-bold text-slate-900 mt-12"
-							>
-								<div>Meredith</div>
-								<div className="-my-5">&</div>
-								<div>Connor</div>
-							</div>
-							<img
-								src="../static/Connor.jpg"
-								className="rounded-3xl"
-							/>
-						</SwiperSlide>
-						<SwiperSlide
+							<div>Meredith</div>
+							<div className="-my-5">&</div>
+							<div>Connor</div>
+						</div>
+						<img
+							src="../static/Connor.jpg"
+							className="rounded-3xl"
+						/>
+					</SwiperSlide>
+					<SwiperSlide
+						style={{
+							display: "flex",
+							justifyContent: "center",
+							textAlign: "center",
+						}}
+					>
+						<div
 							style={{
-								display: "flex",
-								justifyContent: "center",
-								textAlign: "center",
+								textShadow: ".25px .25px .25px #ba9467",
 							}}
+							className=" absolute text-6xl font-latienne-pro font-bold text-slate-900 mt-12 flex flex-col h-full"
 						>
-							<div
-								style={{
-									textShadow: ".25px .25px .25px #ba9467",
-								}}
-								className=" absolute text-6xl font-latienne-pro font-bold text-slate-900 mt-12 flex flex-col h-full"
-							>
-								<div className="justify-center items-end flex h-3/5">
-									Bolts
-								</div>
-								<div className="justify-center items-start flex -m-4">
-									Brew
-								</div>
-								<div className="justify-center items-start flex ">
-									Fest
-								</div>
+							<div className="justify-center items-end flex h-3/5">
+								Bolts
 							</div>
-							<img
-								src="../static/stanley.jpg"
-								className="rounded-3xl"
-							/>
-						</SwiperSlide>
-					</Swiper>
-				</div>
+							<div className="justify-center items-start flex -m-4">
+								Brew
+							</div>
+							<div className="justify-center items-start flex ">
+								Fest
+							</div>
+						</div>
+						<img
+							src="../static/stanley.jpg"
+							className="rounded-3xl"
+						/>
+					</SwiperSlide>
+				</Swiper>
 			</div>
-		</PageTransition>
+		</div>
+		// </PageTransition>
 	);
 };
 

@@ -23,7 +23,7 @@ export default function RootLayout({
 					href="https://use.typekit.net/heo3ekj.css"
 				/>
 			</head>
-			<body className="bg-slate-900">
+			<body className="bg-slate-900 w-screen">
 				{" "}
 				<ProjectContextProvider>{children}</ProjectContextProvider>
 			</body>
