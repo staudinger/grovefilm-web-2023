@@ -56,7 +56,7 @@ const Splash = () => {
 						width="75%"
 					/>
 				</div>{" "}
-				<div className="flex justify-end col-start-1 row-span-3 col-span-2 items-start flex-col mb-10">
+				<div className="flex justify-center col-start-1 row-span-3 col-span-2 items-start flex-col">
 					<div
 						className="text-white font-bold ml-8"
 						style={{ fontFamily: "Poppins" }}
@@ -64,7 +64,7 @@ const Splash = () => {
 						Boutique Film Makers
 					</div>
 				</div>
-				<div className="flex justify-end col-start-3 row-start-3 items-end flex-col mr-8 mb-8">
+				<div className="flex justify-center col-start-3 row-start-3 items-end flex-col mr-8">
 					<Button
 						sx={{
 							color: "white",
