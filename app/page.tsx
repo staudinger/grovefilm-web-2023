@@ -8,9 +8,9 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const Splash = () => {
-	// const isDesktop =
-	// 	typeof window !== "undefined" && window.innerWidth > 767.98;
-	// console.log(isDesktop);
+	const [desktop, setDesktop] = useState(
+		typeof window !== "undefined" && window.innerWidth > 767.98
+	);
 
 	const router = useRouter();
 
@@ -28,7 +28,7 @@ const Splash = () => {
 				>
 					<source
 						src={
-							true
+							desktop
 								? "../../static/desktopReel.mp4"
 								: "../../static/mobileReel.mp4"
 						}

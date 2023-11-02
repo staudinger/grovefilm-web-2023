@@ -29,7 +29,7 @@ const Project = ({
 					}
 					width="100%"
 					height="615px"
-					allow="autoplay; fullscreen; picture-in-picture"
+					allow="autoplay; fullscreen;"
 					allowFullScreen
 					className=" h-1/4 sm:h-full md:h-1/2 lg:h-5/6"
 				></iframe>
