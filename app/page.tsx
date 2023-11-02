@@ -14,12 +14,13 @@ const Splash = () => {
 
 	const router = useRouter();
 
-	setTimeout(() => router.push("/home"), 6000);
+	// setTimeout(() => router.push("/home"), 6000);
 
 	return (
 		<PageTransition>
 			<div className="h-screen">
 				<video
+					playsInline
 					autoPlay
 					muted
 					loop
@@ -43,7 +44,10 @@ const Splash = () => {
 					</div>
 				</div> */}
 					<div className="justify-center items-center row-start-2 flex col-start-2 ">
-						<img src="../../static/grovefilmLogo.png" width="75%" />
+						<img
+							src="../../static/grovefilmLogoOrange.png"
+							width="75%"
+						/>
 					</div>{" "}
 					<div className="flex justify-end col-start-1 row-span-3 col-span-2 items-start flex-col mb-10">
 						<div

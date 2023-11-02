@@ -20,6 +20,7 @@ const Manifesto = () => {
 
 				<div className="h-full">
 					<video
+						playsInline
 						autoPlay
 						muted
 						loop
