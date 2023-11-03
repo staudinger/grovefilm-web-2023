@@ -5,12 +5,19 @@ import "@fontsource/poppins";
 import { Button } from "@mui/material";
 
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 const Splash = () => {
 	const desktop = "../../static/desktopReel.mp4";
 	const mobile = "../../static/mobileReel.mp4";
 
 	const router = useRouter();
+	useEffect(() => {
+		const timeout = setTimeout(() => router.push("/home"), 6000);
+		return () => {
+			clearTimeout(timeout);
+		};
+	}, []);
 
 	return (
 		// <PageTransition>
