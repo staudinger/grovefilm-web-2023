@@ -290,7 +290,7 @@ const Contact = () => {
 							</div>
 							<div
 								className="flex justify-center
-							text-4xl mt-4 tracking-tight"
+							text-3xl mt-4 tracking-tight"
 								style={{
 									color: "#ba9467",
 									fontFamily: "Poppins",

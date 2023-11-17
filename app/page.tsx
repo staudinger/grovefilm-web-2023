@@ -13,7 +13,7 @@ const Splash = () => {
 
 	const router = useRouter();
 	useEffect(() => {
-		const timeout = setTimeout(() => router.push("/home"), 6000);
+		const timeout = setTimeout(() => router.push("/home"), 19000);
 		return () => {
 			clearTimeout(timeout);
 		};
@@ -30,7 +30,10 @@ const Splash = () => {
 				poster="../../static/background.PNG"
 				className="w-full h-full -z-10 fixed object-cover block md:hidden"
 			>
-				<source src={"../../static/mobileReel.mp4"} type="video/mp4" />
+				<source
+					src={"../../static/2023ReelMobile.mp4"}
+					type="video/mp4"
+				/>
 			</video>
 			<video
 				playsInline
@@ -40,7 +43,10 @@ const Splash = () => {
 				poster="../../static/background.PNG"
 				className="w-full h-full -z-10 fixed object-cover hidden sm:hidden md:block lg:block xl:block"
 			>
-				<source src={"../../static/desktopReel.mp4"} type="video/mp4" />
+				<source
+					src={"../../static/2023ReelDesktop.mp4"}
+					type="video/mp4"
+				/>
 			</video>
 
 			<div className=" flex grid grid-cols-3  grid-rows-3 h-screen">

@@ -73,7 +73,7 @@ const Project = ({
 												fontFamily: "Poppins",
 											}}
 										>
-											{key[0] === "equipment" &&
+											{key[0] === "gear" &&
 											key[1][1] !== undefined
 												? key[1][0] + ", " + key[1][1]
 												: key[1]}

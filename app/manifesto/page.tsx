@@ -31,8 +31,8 @@ const Manifesto = () => {
 						<source
 							src={
 								desktop
-									? "../../static/desktopReel.mp4"
-									: "../../static/mobileReel.mp4"
+									? "../../static/2023ReelDesktop.mp4"
+									: "../../static/2023ReelMobile.mp4"
 							}
 							type="video/mp4"
 						/>
@@ -47,14 +47,13 @@ const Manifesto = () => {
 						}}
 						className="mx-8 absolute font-bold h-full flex justify-center items-center lg:mx-80"
 					>
-						It’s the cool air in the sun-kissed sky. It's a song
-						that takes you back. It's the feeling of returning home.
-						Your story is weaved with these moments of memory and
-						family and love. Grovefilm is here to tell the story.
+						The start of a season. The end of an era. Smooches with
+						sunshine. Wrestling with rain. Your story is weaved with
+						these moments. Grovefilm is here to tell your story.
 						This is our purpose and why we believe that every
-						project is an opportunity to create meaning. To relive
-						the moments we never want to forget. &mdash; Peter
-						Staudinger, Founder.
+						partnership is an opportunity to create meaning. To
+						relive the moments we never want to forget. &mdash;
+						Peter Staudinger, Founder.
 					</div>
 				</div>
 			</div>

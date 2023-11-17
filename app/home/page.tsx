@@ -34,7 +34,7 @@ const Home = () => {
 
 			location: "St. Pete Beach, FL",
 			venue: "The Don CeSar",
-			equipment: ["Panasonic S1H"],
+			gear: ["Panasonic S1H"],
 			type: "Wedding",
 		},
 		{
@@ -42,7 +42,7 @@ const Home = () => {
 			id: "877111610",
 			location: "Winter Park, CO",
 			venue: "Winter Park Resort",
-			equipment: ["Panasonic S1H", "DJI Air S2"],
+			gear: ["Panasonic S1H", "DJI Air S2"],
 
 			type: "Wedding",
 		},
@@ -51,16 +51,16 @@ const Home = () => {
 			id: "877101187",
 			location: "St. Petersburg, FL",
 			venue: "The Birchwood / Sunken Gardens",
-			equipment: ["Panasonic S1H", "DJI Air S2"],
+			gear: ["Panasonic S1H", "DJI Air S2"],
 
 			type: "Wedding",
 		},
 		{
-			title: "Meridith & Connor",
+			title: "Meredith & Connor",
 			id: "713488531",
 			location: "Chicago, IL",
 			venue: "Green House Loft",
-			equipment: ["Panasonic S1H", "DJI Air S2"],
+			gear: ["Panasonic S1H", "DJI Air S2"],
 
 			type: "Wedding",
 		},
@@ -69,7 +69,7 @@ const Home = () => {
 			id: "877123147",
 			location: "Tampa, FL",
 			venue: "Amalie Arena",
-			equipment: ["Panasonic S1H", "DJI Air S2"],
+			gear: ["Panasonic S1H", "DJI Air S2"],
 
 			type: "Commercial",
 		},
@@ -83,7 +83,7 @@ const Home = () => {
 				<NavBar />
 
 				<Logo />
-				<div className="flex justify-center items-center text-white mx-8 mb-14 text-center">
+				<div className="flex justify-center items-center text-white mx-8 mb-20 text-center">
 					<div style={{ fontFamily: "Poppins" }}>
 						We are Grovefilm. We are boutique film makers that
 						capture and create films to tell your stories.

@@ -44,44 +44,48 @@ export default function NavBar() {
 	return (
 		<React.Fragment>
 			<CssBaseline />
-			<HideOnScroll>
-				<AppBar color="transparent">
-					<Toolbar>
-						<Button
-							onClick={() => {
-								router.push("/home");
-							}}
-						>
-							<img src="../static/handsWhite.png" width="100px" />
-						</Button>
-						<Button
-							onClick={() => {
-								router.push("/manifesto");
-							}}
-							sx={{
-								color: "white",
-								fontFamily: "Poppins",
-								fontWeight: "bold",
-							}}
-						>
-							Manifesto
-						</Button>
+			{/* <HideOnScroll> */}
+			<AppBar
+				color="transparent"
+				position="fixed"
+				// sx={{ top: "auto", bottom: 0 }}
+			>
+				<div className="justify-center items-center flex">
+					<Button
+						onClick={() => {
+							router.push("/home");
+						}}
+					>
+						<img src="../static/handsWhite.png" width="100px" />
+					</Button>
+					<Button
+						onClick={() => {
+							router.push("/manifesto");
+						}}
+						sx={{
+							color: "#ba9467",
+							fontFamily: "Poppins",
+							fontWeight: "bold",
+						}}
+					>
+						Manifesto
+					</Button>
 
-						<Button
-							onClick={() => {
-								router.push("/contact");
-							}}
-							sx={{
-								color: "white",
-								fontFamily: "Poppins",
-								fontWeight: "bold",
-							}}
-						>
-							Contact
-						</Button>
-					</Toolbar>
-				</AppBar>
-			</HideOnScroll>
+					<Button
+						onClick={() => {
+							router.push("/contact");
+						}}
+						sx={{
+							color: "#ba9467",
+							fontFamily: "Poppins",
+							fontWeight: "bold",
+						}}
+					>
+						Contact
+					</Button>
+				</div>
+			</AppBar>
+			{/* </HideOnScroll> */}
 			<Toolbar />
 		</React.Fragment>
 	);
