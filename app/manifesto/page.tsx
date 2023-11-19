@@ -48,11 +48,11 @@ const Manifesto = () => {
 					>
 						The start of a season. The end of an era. Smooches with
 						sunshine. Wrestling with rain. Your story is weaved with
-						these moments. Grovefilm is here to tell your story.
-						This is our purpose and why we believe that every
-						partnership is an opportunity to create meaning. To
-						relive the moments we never want to forget. &mdash;
-						Peter Staudinger, Founder.
+						these moments, and Grovefilm is here to tell it. This is
+						our purpose and why we believe that every partnership is
+						an opportunity to create meaning. To relive the moments
+						we never want to forget. &mdash; Peter Staudinger,
+						Founder.
 					</div>
 				</div>
 			</div>
