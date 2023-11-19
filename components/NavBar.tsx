@@ -66,6 +66,7 @@ export default function NavBar() {
 							color: "#ba9467",
 							fontFamily: "Poppins",
 							fontWeight: "bold",
+							textShadow: "1px 1px 2px #0f172a",
 						}}
 					>
 						Manifesto
@@ -79,6 +80,7 @@ export default function NavBar() {
 							color: "#ba9467",
 							fontFamily: "Poppins",
 							fontWeight: "bold",
+							textShadow: "1px 1px 2px #0f172a",
 						}}
 					>
 						Contact

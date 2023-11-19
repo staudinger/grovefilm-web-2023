@@ -15,17 +15,29 @@ import dayjs from "dayjs";
 import emailjs from "@emailjs/browser";
 import { useState, useRef } from "react";
 import { setDoc, doc, getFirestore } from "firebase/firestore";
+import { initializeApp } from "firebase/app";
 
 const Contact = () => {
-	//const db = getFirestore();
-	const form: any = useRef();
-
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [phone, setPhone] = useState("");
 	const [message, setMessage] = useState("");
 	const [location, setLocation] = useState("");
 	const [date, setDate] = useState(Date.now().toString());
+
+	const firebaseConfig = {
+		apiKey: "AIzaSyBmhU0bopRsBdDwoGw-9ZNFRxUb1n_m6RA",
+		authDomain: "grovefilm-6532c.firebaseapp.com",
+		projectId: "grovefilm-6532c",
+		storageBucket: "grovefilm-6532c.appspot.com",
+		messagingSenderId: "748922207761",
+		appId: "1:748922207761:web:8de82e193aea7509063bb0",
+		measurementId: "G-45FFZFRH0S",
+	};
+
+	const app = initializeApp(firebaseConfig);
+	const db = getFirestore();
+	const form: any = useRef();
 
 	const handleName = (e: any) => {
 		setName(e.target.value);
@@ -82,15 +94,15 @@ const Contact = () => {
 				createStamp.getSeconds() +
 				":" +
 				createStamp.getMilliseconds();
-			// const docRef = await setDoc(doc(db, "messages", datetime), {
-			// 	name: name,
-			// 	email: email,
-			// 	phone: phone,
-			// 	message: message,
-			// 	location: location,
-			// 	date: date,
-			// 	created: datetime,
-			// });
+			const docRef = await setDoc(doc(db, "messages", datetime), {
+				name: name,
+				email: email,
+				phone: phone,
+				message: message,
+				location: location,
+				date: date,
+				created: datetime,
+			});
 		} catch (e) {
 			console.error("Error adding document: ", e);
 		}

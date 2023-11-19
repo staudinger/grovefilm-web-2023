@@ -37,7 +37,6 @@ const Manifesto = () => {
 							type="video/mp4"
 						/>
 					</video>
-
 					<div
 						style={{
 							fontFamily: "Poppins",
@@ -45,7 +44,7 @@ const Manifesto = () => {
 							zIndex: 2,
 							textShadow: "1px 1px 2px black",
 						}}
-						className="mx-8 absolute font-bold h-full flex justify-center items-center lg:mx-80"
+						className="absolute font-bold h-full flex justify-center items-center lg:text-center mx-8 lg:mx-96 "
 					>
 						The start of a season. The end of an era. Smooches with
 						sunshine. Wrestling with rain. Your story is weaved with
