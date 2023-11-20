@@ -50,9 +50,8 @@ const Manifesto = () => {
 						sunshine. Wrestling with rain. Your story is weaved with
 						these moments, and Grovefilm is here to tell it. This is
 						our purpose and why we believe that every partnership is
-						an opportunity to create meaning. To relive the moments
-						we never want to forget. &mdash; Peter Staudinger,
-						Founder.
+						a gift to create meaning. To relive the moments we never
+						want to forget. &mdash; Peter Staudinger, Founder.
 					</div>
 				</div>
 			</div>
