@@ -342,8 +342,8 @@ const Contact = () => {
 						</form>
 					</div>{" "}
 					<div
-						className="text-white font-bold grid grid-cols-1 mx-8"
-						style={{ fontFamily: "Poppins" }}
+						className=" font-bold grid grid-cols-1 mx-8"
+						style={{ fontFamily: "Poppins", color: "#ba9467" }}
 					>
 						<div>
 							<Email /> &mdash; peter@grovefilm.com

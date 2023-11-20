@@ -55,18 +55,23 @@ const Splash = () => {
 				</div>{" "}
 				<div className="flex justify-center col-start-1 row-span-3 col-span-2 items-start flex-col">
 					<div
-						className="text-white font-bold ml-8"
-						style={{ fontFamily: "Poppins" }}
+						className=" font-bold ml-16"
+						style={{
+							fontFamily: "Poppins",
+							textShadow: ".5px .5px 1px #0f172a",
+							color: "#ba9467",
+						}}
 					>
 						Boutique Film Makers
 					</div>
 				</div>
-				<div className="flex justify-center col-start-3 row-start-3 items-end flex-col mr-8">
+				<div className="flex justify-center col-start-3 row-start-3 items-end flex-col mr-16">
 					<Button
 						sx={{
-							color: "white",
+							color: "#ba9467",
 							fontFamily: "Poppins",
 							fontWeight: "bold",
+							textShadow: ".5px .5px 1px #0f172a",
 						}}
 						onClick={() => {
 							router.push("/home");

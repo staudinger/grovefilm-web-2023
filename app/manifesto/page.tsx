@@ -42,7 +42,7 @@ const Manifesto = () => {
 							fontFamily: "Poppins",
 							color: "white",
 							zIndex: 2,
-							textShadow: "1px 1px 2px black",
+							textShadow: "1px 1px 2px #0f172a",
 						}}
 						className="absolute font-bold h-full flex justify-center items-center lg:text-center mx-8 lg:mx-96 "
 					>

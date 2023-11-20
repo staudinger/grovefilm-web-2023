@@ -17,7 +17,7 @@ const Project = ({
 	const projectCtx = useContext(ProjectContext);
 	return (
 		// <PageTransition>
-		<div className="bg-slate-900 h-screen">
+		<div className="bg-slate-900 h-screen overflow-x-hidden">
 			<NavBar />
 
 			<Logo />

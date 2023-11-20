@@ -42,9 +42,7 @@ export default function NavBar() {
 	const router = useRouter();
 
 	return (
-		<React.Fragment>
-			<CssBaseline />
-			{/* <HideOnScroll> */}
+		<div className=" ">
 			<AppBar
 				color="transparent"
 				position="fixed"
@@ -87,8 +85,6 @@ export default function NavBar() {
 					</Button>
 				</div>
 			</AppBar>
-			{/* </HideOnScroll> */}
-			<Toolbar />
-		</React.Fragment>
+		</div>
 	);
 }

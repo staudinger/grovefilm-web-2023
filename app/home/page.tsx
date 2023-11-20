@@ -78,54 +78,53 @@ const Home = () => {
 	const router = useRouter();
 	return (
 		// <PageTransition>
-		<div className="bg-slate-900 h-screen">
-			<div className="grid grid-col-1">
-				<NavBar />
+		<div className="bg-slate-900 overflow-hidden justify-center flex items-center flex-col">
+			<NavBar />
 
-				<Logo />
-				<div className="flex justify-center items-center text-white mx-8 mb-20 text-center">
-					<div style={{ fontFamily: "Poppins" }}>
-						We are Grovefilm. We are boutique film makers that
-						capture and create films to tell your stories.
-					</div>
+			<Logo />
+			<div className="flex justify-center items-center mx-8 mb-20 text-center">
+				<div style={{ fontFamily: "Poppins", color: "#ba9467" }}>
+					We are Grovefilm. We are boutique film makers that capture
+					and create films to tell your stories.
 				</div>
 			</div>
-			<div className="justify-center items-center flex">
+			<div className="justify-center items-center flex overflow-hidden w-11/12 rounded-3xl">
 				<Swiper
 					onInit={(swiper) => {
 						setSwiper(swiper);
 					}}
 					slidesPerView={1}
-					spaceBetween={25}
+					spaceBetween={35}
 					// using "ratio" endpoints
 					breakpoints={{
 						"@0.75": {
 							slidesPerView: 2,
-							spaceBetween: 25,
+							spaceBetween: 35,
 						},
 						"@1.00": {
 							slidesPerView: 3,
-							spaceBetween: 25,
+							spaceBetween: 35,
 						},
 					}}
-					modules={[Mousewheel, Scrollbar, Autoplay]}
+					modules={[Mousewheel, Autoplay]}
 					autoplay={{
 						delay: 2000,
 						disableOnInteraction: false,
 					}}
-					scrollbar={false}
 					mousewheel={true}
 					speed={1000}
 					onClick={() => {
 						projectCtx.setProject(videos[swiper.clickedIndex]);
 						router.push("/" + videos[swiper.clickedIndex].id);
 					}}
+					style={{ overflow: "hidden" }}
 				>
 					<SwiperSlide
 						style={{
 							display: "flex",
 							justifyContent: "center",
 							textAlign: "center",
+							overflow: "hidden",
 						}}
 					>
 						<img
@@ -148,6 +147,7 @@ const Home = () => {
 							display: "flex",
 							justifyContent: "center",
 							textAlign: "center",
+							overflow: "hidden",
 						}}
 					>
 						<div
@@ -170,6 +170,7 @@ const Home = () => {
 							display: "flex",
 							justifyContent: "center",
 							textAlign: "center",
+							overflow: "hidden",
 						}}
 					>
 						<div
@@ -192,6 +193,7 @@ const Home = () => {
 							display: "flex",
 							justifyContent: "center",
 							textAlign: "center",
+							overflow: "hidden",
 						}}
 					>
 						<div
@@ -214,6 +216,7 @@ const Home = () => {
 							display: "flex",
 							justifyContent: "center",
 							textAlign: "center",
+							overflow: "hidden",
 						}}
 					>
 						<div
