@@ -81,7 +81,7 @@ const Home = () => {
 					and create films to tell your stories.
 				</div>
 			</div>
-			<div className="justify-center items-center flex overflow-hidden w-11/12 rounded-3xl">
+			<div className="justify-center items-center flex overflow-hidden w-screen lg:w-11/12 rounded-3xl">
 				<Swiper
 					onInit={(swiper) => {
 						setSwiper(swiper);
