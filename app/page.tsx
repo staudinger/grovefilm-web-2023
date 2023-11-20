@@ -1,6 +1,5 @@
 "use client";
 import Logo from "@/components/Logo";
-import PageTransition from "@/components/PageTransition";
 import "@fontsource/poppins";
 import { Button } from "@mui/material";
 
@@ -8,9 +7,6 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 const Splash = () => {
-	const desktop = "../../static/desktopReel.mp4";
-	const mobile = "../../static/mobileReel.mp4";
-
 	const router = useRouter();
 	useEffect(() => {
 		const timeout = setTimeout(() => router.push("/home"), 19000);
@@ -52,10 +48,10 @@ const Splash = () => {
 			<div className=" flex grid grid-cols-3  grid-rows-3 h-screen">
 				<div className="justify-center items-center row-start-2 flex col-start-2 ">
 					<Logo />
-				</div>{" "}
+				</div>
 				<div className="flex justify-center col-start-1 row-span-3 col-span-2 items-start flex-col">
 					<div
-						className=" font-bold ml-16"
+						className=" font-bold ml-8 lg:ml-16"
 						style={{
 							fontFamily: "Poppins",
 							textShadow: ".5px .5px 1px #0f172a",
@@ -65,7 +61,7 @@ const Splash = () => {
 						Boutique Film Makers
 					</div>
 				</div>
-				<div className="flex justify-center col-start-3 row-start-3 items-end flex-col mr-16">
+				<div className="flex justify-center col-start-3 row-start-3 items-end flex-col mr-8 lg:mr-16">
 					<Button
 						sx={{
 							color: "#ba9467",

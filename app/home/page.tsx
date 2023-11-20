@@ -1,21 +1,14 @@
 "use client";
 
 import NavBar from "@/components/NavBar";
-import { Fade } from "@mui/material";
-import Typography from "@mui/material/Typography";
+
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import { Scrollbar, Mousewheel, Autoplay } from "swiper/modules";
 import "@fontsource/poppins";
 import { useState, useContext } from "react";
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
-import ImageListItemBar from "@mui/material/ImageListItemBar";
-import ListSubheader from "@mui/material/ListSubheader";
-import IconButton from "@mui/material/IconButton";
-import InfoIcon from "@mui/icons-material/Info";
-import PageTransition from "@/components/PageTransition";
+
 import { Button } from "@mui/material";
 import { useRouter } from "next/navigation";
 import Logo from "@/components/Logo";
@@ -83,7 +76,7 @@ const Home = () => {
 
 			<Logo />
 			<div className="flex justify-center items-center mx-8 mb-20 text-center">
-				<div style={{ fontFamily: "Poppins", color: "#ba9467" }}>
+				<div style={{ fontFamily: "Poppins", color: "white" }}>
 					We are Grovefilm. We are boutique film makers that capture
 					and create films to tell your stories.
 				</div>
