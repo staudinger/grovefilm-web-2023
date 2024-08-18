@@ -46,7 +46,7 @@ export default function NavBar() {
 			<AppBar
 				color="transparent"
 				position="fixed"
-				// sx={{ top: "auto", bottom: 0 }}
+				style={{ boxShadow: "none" }}
 			>
 				<div className="justify-center items-center flex">
 					<Button
