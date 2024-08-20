@@ -8,12 +8,12 @@ import { useEffect } from "react";
 
 const Splash = () => {
 	const router = useRouter();
-	// useEffect(() => {
-	// 	const timeout = setTimeout(() => router.push("/home"), 19000);
-	// 	return () => {
-	// 		clearTimeout(timeout);
-	// 	};
-	// }, []);
+	useEffect(() => {
+		const timeout = setTimeout(() => router.push("/home"), 19000);
+		return () => {
+			clearTimeout(timeout);
+		};
+	}, []);
 
 	return (
 		// <PageTransition>

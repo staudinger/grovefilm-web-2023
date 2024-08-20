@@ -75,11 +75,18 @@ const Home = () => {
 			<NavBar />
 
 			<Logo />
-			<div className="flex justify-center items-center mx-8 mb-20 text-center">
-				<div style={{ fontFamily: "Poppins", color: "white" }}>
+
+			<div className="flex justify-center items-center mx-8 mb-20 text-4xl">
+				<div className="xl:w-1/3 flex-wrap"></div>
+
+				<div
+					style={{ fontFamily: "Poppins", color: "white" }}
+					className="sm:w-full xl:w-1/3"
+				>
 					We are Grovefilm. We are boutique film makers that capture
 					and create films to tell your stories.
 				</div>
+				<div className="xl:w-1/3 flex-wrap"></div>
 			</div>
 			<div className="justify-center items-center flex overflow-hidden w-screen lg:w-11/12 rounded-3xl">
 				<Swiper
@@ -110,7 +117,7 @@ const Home = () => {
 						projectCtx.setProject(videos[swiper.clickedIndex]);
 						router.push("/" + videos[swiper.clickedIndex].id);
 					}}
-					style={{ overflow: "hidden" }}
+					style={{ overflow: "hidden", cursor: "pointer" }}
 				>
 					<SwiperSlide
 						style={{
