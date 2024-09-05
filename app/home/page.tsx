@@ -76,12 +76,12 @@ const Home = () => {
 
 			<Logo />
 
-			<div className="flex justify-center items-center mx-8 my-8 text-4xl">
+			<div className="flex justify-center items-center mx-8 text-3xl mt-4 mb-12">
 				<div className="xl:w-1/3 flex-wrap"></div>
 
 				<div
 					style={{ fontFamily: "Poppins", color: "white" }}
-					className="sm:w-full xl:w-1/3 border-t py-8"
+					className="sm:w-full xl:w-1/3 border-l px-4 border-secondary"
 				>
 					We are Grovefilm. We are boutique film makers that capture
 					and create films to tell your stories.

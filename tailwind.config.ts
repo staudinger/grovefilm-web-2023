@@ -16,6 +16,9 @@ const config: Config = {
 			fontFamily: {
 				"latienne-pro": ["latienne-pro", "serif"],
 			},
+			colors: {
+				secondary: "#ba9467",
+			},
 		},
 	},
 	plugins: [],
