@@ -33,7 +33,7 @@ const Project = ({
 				allowFullScreen
 				className=" h-1/4 sm:h-full md:h-1/2 lg:h-5/6"
 			></iframe>
-			<div className="flex mx-8">
+			<div className="flex m-8 lg:w-1/2">
 				<div
 					style={{ color: "#ba9467", fontFamily: "latienne-pro" }}
 					className="font-bold text-2xl w-full"
@@ -42,7 +42,7 @@ const Project = ({
 				</div>
 				<div
 					style={{ color: "#ba9467", fontFamily: "Poppins" }}
-					className="text-lg justify-end flex w-full "
+					className="text-lg justify-end flex w-full"
 				>
 					{projectCtx.project.type}
 				</div>
@@ -68,7 +68,7 @@ const Project = ({
 											{key[0]}
 										</div>
 										<div
-											className="italic"
+											className="italic flex justify-end w-full"
 											style={{
 												fontFamily: "Poppins",
 											}}
@@ -80,14 +80,14 @@ const Project = ({
 										</div>
 										<Divider
 											sx={{
-												backgroundColor: "white",
+												backgroundColor: "#ba9467",
 											}}
 										/>
 									</div>
 									<div className="mx-8 lg:w-1/2">
 										<Divider
 											sx={{
-												backgroundColor: "white",
+												backgroundColor: "#ba9467",
 											}}
 										/>
 									</div>
