@@ -4,7 +4,7 @@ import "@fontsource/poppins";
 import { Button } from "@mui/material";
 
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Splash = () => {
 	const router = useRouter();
@@ -15,8 +15,19 @@ const Splash = () => {
 		};
 	}, []);
 
+	const [display, setDisplay] = useState("flex");
+	const [color, setColor] = useState("#ba9467");
+	function toggleText() {
+		setDisplay(display === "none" ? "flex" : "none");
+	}
+	function toggleColor() {
+		setColor(color === "#0f172a" ? "#ba9467" : "#0f172a");
+	}
+
+	setInterval(toggleText, 6000); // Toggle every 1 second
+	setInterval(toggleColor, 8000);
+
 	return (
-		// <PageTransition>
 		<div className="h-screen">
 			<video
 				playsInline
@@ -47,7 +58,13 @@ const Splash = () => {
 
 			<div className=" flex grid grid-cols-3  grid-rows-3 h-screen">
 				<div className="justify-center items-center row-start-2 flex col-start-2 ">
-					<Logo />
+					<div
+						style={{
+							display: display,
+						}}
+					>
+						<Logo color={color} />
+					</div>
 				</div>
 				<div className="flex justify-center col-start-1 row-span-3 col-span-2 items-start flex-col">
 					<div

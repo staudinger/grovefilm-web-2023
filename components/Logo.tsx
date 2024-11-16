@@ -1,29 +1,38 @@
-const Logo = () => {
+const Logo = ({ color = "#ba9467" }: { color: string }) => {
 	return (
-		<div className="flex justify-center mt-20 mb-4">
+		// <div className="flex justify-center mt-20 mb-4">
+		<div className="flex justify-center mb-4">
 			<div
 				style={{
-					color: "#ba9467",
+					color: color,
 				}}
-				className="tracking-tighter font-latienne-pro text-white font-bold text-7xl"
+				className="tracking-tighter font-latienne-pro text-white font-bold text-5xl"
 			>
 				Grove
 			</div>
 			<div
-				style={{ letterSpacing: -7, color: "#ba9467" }}
-				className="font-latienne-pro text-white font-bold text-7xl"
+				style={{
+					color: color,
+					letterSpacing: "-.1em",
+				}}
+				className="font-latienne-pro text-white font-bold text-5xl"
 			>
 				f
 			</div>
 			<div
-				style={{ paddingTop: 1, color: "#ba9467" }}
-				className="tracking-tighter font-latienne-pro text-white font-bold text-7xl "
+				style={{
+					paddingTop: 1,
+					color: color,
+				}}
+				className="tracking-tighter font-latienne-pro text-white font-bold text-5xl "
 			>
 				i
 			</div>
 			<div
-				style={{ color: "#ba9467" }}
-				className="tracking-tighter font-latienne-pro text-white font-bold text-7xl "
+				style={{
+					color: color,
+				}}
+				className="tracking-tighter font-latienne-pro text-white font-bold text-5xl "
 			>
 				lm
 			</div>

@@ -4,7 +4,18 @@ import Logo from "@/components/Logo";
 import NavBar from "@/components/NavBar";
 import PageTransition from "@/components/PageTransition";
 import "@fontsource/poppins";
+import { Almarai } from "next/font/google";
 import { useEffect, useState } from "react";
+
+const almaraiBold = Almarai({
+	subsets: ["arabic"],
+	weight: "800",
+});
+
+const almaraiLight = Almarai({
+	subsets: ["arabic"],
+	weight: "300",
+});
 
 const Manifesto = () => {
 	const [desktop, setDesktop] = useState(
@@ -15,8 +26,9 @@ const Manifesto = () => {
 		<PageTransition>
 			<div className="bg-slate-900 h-screen">
 				<NavBar />
-
-				<Logo />
+				<div className="justify-center flex items-start pt-16 xl:pt-4">
+					<Logo color="#ba9467" />
+				</div>
 
 				<div className="h-full">
 					<video
@@ -44,13 +56,33 @@ const Manifesto = () => {
 							zIndex: 2,
 							textShadow: "1px 1px 2px #0f172a",
 						}}
-						className="absolute font-bold h-full flex justify-center items-center lg:text-center mx-8 lg:mx-96 "
+						className="absolute font-bold h-full flex justify-center items-center lg:text-center mx-8 lg:mx-58 "
 					>
-						The start of a season. The end of an era. Smooching in
+						{/* The start of a season. The end of an era. Smooching in
 						sunshine. Wrestling in rain. Your story is weaved with
-						these moments, and Grovefilm is here to tell it. This is
-						our purpose. To relive the moments we never want to
-						forget. &mdash; Peter Staudinger, Founder.
+						these moments. Grovefilm is here to tell that story. We are here so you can relive the moments you never want to
+						forget. &mdash; Peter Staudinger, Founder. */}
+						<div className="flex justify-center items-center mx-8 text-2xl xl:text-5xl mb-12">
+							<div
+								style={{ color: "white" }}
+								className="w-full xl:w-3/4 border-l px-4 border-secondary"
+							>
+								<span
+									className={`${almaraiLight.className} uppercase`}
+								>
+									Start of a season. End of an era. Smooching
+									in sunshine. Wrestling in rain. Your story
+									is weaved with these moments.{" "}
+								</span>
+								<span
+									className={`${almaraiBold.className} uppercase`}
+								>
+									Grovefilm is here to tell that story, so you
+									can relive the moments you never want to
+									forget{" "}
+								</span>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

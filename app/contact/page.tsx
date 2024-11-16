@@ -16,6 +16,16 @@ import emailjs from "@emailjs/browser";
 import { useState, useRef } from "react";
 import { setDoc, doc, getFirestore } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
+import { Almarai } from "next/font/google";
+
+const almaraiLight = Almarai({
+	subsets: ["arabic"],
+	weight: "300",
+});
+const almaraiBold = Almarai({
+	subsets: ["arabic"],
+	weight: "800",
+});
 
 const Contact = () => {
 	const [name, setName] = useState("");
@@ -134,42 +144,9 @@ const Contact = () => {
 			<div className="bg-slate-900 h-screen">
 				<ThemeProvider theme={theme}>
 					<NavBar />
-					{/* <div className=" -my-14 mx-2 flex justify-center items-center">
-						<img src="../../static/GFSquareOrange.PNG" />
-					</div> */}
-					{/* <div className="flex justify-center">
-						<div
-							style={{
-								color: "#ba9467",
-								// fontFamily: "latienne-pro",
-								// fontStyle: "normal",
-								// fontWeight: 400,
-							}}
-							className="tracking-tighter font-latienne-pro text-white font-bold text-7xl"
-						>
-							Grove
-						</div>
-						<div
-							style={{ letterSpacing: -7, color: "#ba9467" }}
-							className="font-latienne-pro text-white font-bold text-7xl"
-						>
-							f
-						</div>
-						<div
-							style={{ paddingTop: 1, color: "#ba9467" }}
-							className="tracking-tighter font-latienne-pro text-white font-bold text-7xl "
-						>
-							i
-						</div>
-						<div
-							style={{ color: "#ba9467" }}
-							className="tracking-tighter font-latienne-pro text-white font-bold text-7xl "
-						>
-							lm
-						</div>
-					</div> */}
-					<Logo />
-					{/* <div className="ml-6 -mt-1 grid grid-cols-2"> */}
+					<div className="justify-center flex items-start pt-16 xl:pt-4">
+						<Logo color="#ba9467" />
+					</div>
 					<div className="-mt-1">
 						{/* <div className="col-start-1 col-span-2 flex justify-center"> */}
 						<form ref={form} onSubmit={sendMessage}>
@@ -188,6 +165,9 @@ const Contact = () => {
 										},
 										"& .MuiInput-underline:before": {
 											borderBottomColor: "white",
+										},
+										"& .MuiInput-underline:after": {
+											borderBottomColor: "#ba9467",
 										},
 									}}
 									color="primary"
@@ -214,6 +194,9 @@ const Contact = () => {
 										"& .MuiInput-underline:before": {
 											borderBottomColor: "white",
 										},
+										"& .MuiInput-underline:after": {
+											borderBottomColor: "#ba9467",
+										},
 									}}
 									color="primary"
 									id="standard-basic"
@@ -239,6 +222,9 @@ const Contact = () => {
 										"& .MuiInput-underline:before": {
 											borderBottomColor: "white",
 										},
+										"& .MuiInput-underline:after": {
+											borderBottomColor: "#ba9467",
+										},
 									}}
 									color="primary"
 									id="standard-basic"
@@ -263,6 +249,9 @@ const Contact = () => {
 										},
 										"& .MuiInput-underline:before": {
 											borderBottomColor: "white",
+										},
+										"& .MuiInput-underline:after": {
+											borderBottomColor: "#ba9467",
 										},
 									}}
 									color="primary"
@@ -290,6 +279,9 @@ const Contact = () => {
 												borderColor: "white",
 											},
 										},
+										"& .MuiInput-underline:after": {
+											borderBottomColor: "#ba9467",
+										},
 									}}
 									defaultValue={dayjs(Date.now())}
 									closeOnSelect
@@ -301,11 +293,11 @@ const Contact = () => {
 								/>
 							</div>
 							<div
-								className="flex justify-center
-							text-3xl mt-4 tracking-tight"
+								className={`${almaraiBold.className} uppercase flex justify-center
+							text-3xl mt-4 tracking-tight`}
 								style={{
 									color: "#ba9467",
-									fontFamily: "Poppins",
+									// fontFamily: "Poppins",
 								}}
 							>
 								Dear Grovefilm,
@@ -323,6 +315,9 @@ const Contact = () => {
 											color: "#ba9467",
 											fontFamily: "Poppins",
 										},
+										"& .MuiInput-underline:after": {
+											borderBottomColor: "#ba9467",
+										},
 									}}
 									color="primary"
 									id="standard-basic"
@@ -334,7 +329,9 @@ const Contact = () => {
 									value={message}
 								/>
 							</div>
-							<div className="mb-12 flex justify-center">
+							<div
+								className={`${almaraiBold.className} uppercase mb-12 flex justify-center`}
+							>
 								<Button sx={{}} variant="text" type="submit">
 									Send Email
 								</Button>
@@ -342,8 +339,8 @@ const Contact = () => {
 						</form>
 					</div>{" "}
 					<div
-						className=" font-bold grid grid-cols-1 mx-8"
-						style={{ fontFamily: "Poppins", color: "#ba9467" }}
+						className={`${almaraiBold.className} font-bold grid grid-cols-1 mx-8`}
+						style={{ color: "#ba9467" }}
 					>
 						<div>
 							<Email /> &mdash; peter@grovefilm.com

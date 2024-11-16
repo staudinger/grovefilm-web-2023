@@ -19,8 +19,9 @@ const Project = ({
 		// <PageTransition>
 		<div className="bg-slate-900 h-screen overflow-x-hidden">
 			<NavBar />
-
-			<Logo />
+			<div className="justify-center flex items-start pt-16 xl:pt-4">
+				<Logo color="#ba9467" />
+			</div>
 			<iframe
 				src={
 					"https://player.vimeo.com/video/" +
@@ -42,7 +43,7 @@ const Project = ({
 				</div>
 				<div
 					style={{ color: "#ba9467", fontFamily: "Poppins" }}
-					className="text-lg justify-end flex w-full"
+					className="text-lg justify-end flex w-full uppercase"
 				>
 					{projectCtx.project.type}
 				</div>

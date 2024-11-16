@@ -12,6 +12,16 @@ import Container from "@mui/material/Container";
 import Slide from "@mui/material/Slide";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { Almarai } from "next/font/google";
+
+const almaraiLight = Almarai({
+	subsets: ["arabic"],
+	weight: "300",
+});
+const almaraiBold = Almarai({
+	subsets: ["arabic"],
+	weight: "800",
+});
 
 interface Props {
 	/**
@@ -42,13 +52,13 @@ export default function NavBar() {
 	const router = useRouter();
 
 	return (
-		<div className=" ">
+		<div className="">
 			<AppBar
 				color="transparent"
 				position="fixed"
 				style={{ boxShadow: "none" }}
 			>
-				<div className="justify-center items-center flex">
+				<div className=" justify-center xl:justify-end items-center flex pr-4">
 					<Button
 						onClick={() => {
 							router.push("/home");
@@ -57,12 +67,12 @@ export default function NavBar() {
 						<img src="../static/handsWhite.png" width="100px" />
 					</Button>
 					<Button
+						className={`${almaraiBold.className} uppercase`}
 						onClick={() => {
 							router.push("/manifesto");
 						}}
 						sx={{
 							color: "#ba9467",
-							fontFamily: "Poppins",
 							fontWeight: "bold",
 							textShadow: "1px 1px 2px #0f172a",
 						}}
@@ -71,12 +81,12 @@ export default function NavBar() {
 					</Button>
 
 					<Button
+						className={`${almaraiBold.className} uppercase`}
 						onClick={() => {
 							router.push("/contact");
 						}}
 						sx={{
 							color: "#ba9467",
-							fontFamily: "Poppins",
 							fontWeight: "bold",
 							textShadow: "1px 1px 2px #0f172a",
 						}}

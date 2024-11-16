@@ -13,7 +13,16 @@ import { Button } from "@mui/material";
 import { useRouter } from "next/navigation";
 import Logo from "@/components/Logo";
 import { ProjectContext } from "@/ProjectContext";
+import { Almarai } from "next/font/google";
 
+const almaraiLight = Almarai({
+	subsets: ["arabic"],
+	weight: "300",
+});
+const almaraiBold = Almarai({
+	subsets: ["arabic"],
+	weight: "800",
+});
 const Home = () => {
 	const [checked, setChecked] = useState(false);
 
@@ -70,25 +79,25 @@ const Home = () => {
 
 	const router = useRouter();
 	return (
-		// <PageTransition>
-		<div className="bg-slate-900 overflow-hidden justify-center flex items-center flex-col">
+		<div className="bg-slate-900 overflow-hidden flex flex-col">
 			<NavBar />
-
-			<Logo />
-
-			<div className="flex justify-center items-center mx-8 text-3xl mt-4 mb-12">
-				<div className="xl:w-1/3 flex-wrap"></div>
-
-				<div
-					style={{ fontFamily: "Poppins", color: "white" }}
-					className="sm:w-full xl:w-1/3 border-l px-4 border-secondary"
-				>
-					We are Grovefilm. We are boutique film makers that capture
-					and create films to tell your stories.
-				</div>
-				<div className="xl:w-1/3 flex-wrap"></div>
+			<div className="justify-center flex items-start pt-16 xl:pt-4">
+				<Logo color="#ba9467" />
 			</div>
-			<div className="justify-center items-center flex overflow-hidden w-screen lg:w-11/12 rounded-3xl">
+			<div className="flex justify-center items-center mx-8 text-3xl xl:text-5xl mb-12">
+				<div
+					style={{ color: "white" }}
+					className="w-full xl:w-3/4 border-l px-4 border-secondary"
+				>
+					<span className={`${almaraiLight.className} uppercase`}>
+						Boutique film makers.&nbsp;
+					</span>
+					<span className={`${almaraiBold.className} uppercase`}>
+						relive the moments you never want to forget.
+					</span>
+				</div>
+			</div>
+			<div className="justify-center items-center flex overflow-hidden w-screen lg:w-11/12 xl:w-full rounded-3xl pb-5 xl:pb-2">
 				<Swiper
 					onInit={(swiper) => {
 						setSwiper(swiper);
