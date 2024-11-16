@@ -97,7 +97,7 @@ const Home = () => {
 					</span>
 				</div>
 			</div>
-			<div className="justify-center items-center flex overflow-hidden w-screen lg:w-11/12 xl:w-full rounded-3xl pb-5 xl:pb-2">
+			<div className="justify-center items-center flex overflow-hidden w-screen lg:w-11/12 xl:w-full rounded-3xl pb-2">
 				<Swiper
 					onInit={(swiper) => {
 						setSwiper(swiper);
