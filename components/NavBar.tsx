@@ -67,7 +67,7 @@ export default function NavBar() {
 						<img src="../static/handsWhite.png" width="100px" />
 					</Button>
 					<Button
-						className={`${almaraiBold.className} uppercase`}
+						className={`${almaraiLight.className} uppercase`}
 						onClick={() => {
 							router.push("/manifesto");
 						}}
@@ -81,7 +81,7 @@ export default function NavBar() {
 					</Button>
 
 					<Button
-						className={`${almaraiBold.className} uppercase`}
+						className={`${almaraiLight.className} uppercase`}
 						onClick={() => {
 							router.push("/contact");
 						}}

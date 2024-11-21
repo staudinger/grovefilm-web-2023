@@ -31,7 +31,7 @@ const Home = () => {
 
 	const videos = [
 		{
-			title: "Almery & Zach",
+			title: "Zach & Almery",
 			id: "877103688",
 
 			location: "St. Pete Beach, FL",
@@ -40,7 +40,7 @@ const Home = () => {
 			type: "Wedding",
 		},
 		{
-			title: "Christina & Eric",
+			title: "Eric & Christina",
 			id: "877111610",
 			location: "Winter Park, CO",
 			venue: "Winter Park Resort",
@@ -49,7 +49,7 @@ const Home = () => {
 			type: "Wedding",
 		},
 		{
-			title: "Talia & AJ",
+			title: "AJ & Talia",
 			id: "877101187",
 			location: "St. Petersburg, FL",
 			venue: "The Birchwood / Sunken Gardens",
@@ -58,7 +58,7 @@ const Home = () => {
 			type: "Wedding",
 		},
 		{
-			title: "Meredith & Connor",
+			title: "Connor & Meredith",
 			id: "713488531",
 			location: "Chicago, IL",
 			venue: "Green House Loft",
@@ -118,7 +118,7 @@ const Home = () => {
 					modules={[Mousewheel, Autoplay]}
 					autoplay={{
 						delay: 2000,
-						disableOnInteraction: false,
+						disableOnInteraction: true,
 					}}
 					mousewheel={true}
 					speed={1000}
@@ -131,104 +131,160 @@ const Home = () => {
 					<SwiperSlide
 						style={{
 							display: "flex",
-							justifyContent: "center",
-							textAlign: "center",
+							justifyContent: "start",
+							textAlign: "start",
 							overflow: "hidden",
 						}}
 					>
 						<img
-							src="../static/Almery.jpg"
+							src="../static/Almery-bw.jpg"
 							className="rounded-3xl"
 						/>
 						<div
 							style={{
 								textShadow: ".25px .25px .25px #ba9467",
 							}}
-							className=" absolute z-10 text-6xl font-latienne-pro font-bold text-slate-900 mt-12"
+							className={`${almaraiLight.className} ml-8 uppercase absolute z-10 text-5xl xl:text-6xl font-bold text-slate-900 mt-8 w-full flex-nowrap flex`}
 						>
-							<div>Almery</div>
-							<div className="-my-5">&</div>
-							<div>Zach</div>
+							<div className="">
+								<div className=" flex flex-nowrap">
+									<span className=" flex items-end">
+										Zach
+									</span>
+									{/* <span
+										className={`${almaraiLight.className} text-4xl flex items-center justify-center pl-2`}
+									>
+										&
+									</span> */}
+								</div>
+
+								<div className={`${almaraiBold.className}`}>
+									Almery
+								</div>
+							</div>
 						</div>
 					</SwiperSlide>
 					<SwiperSlide
 						style={{
 							display: "flex",
-							justifyContent: "center",
-							textAlign: "center",
+							justifyContent: "start",
+							textAlign: "start",
 							overflow: "hidden",
 						}}
 					>
 						<div
-							style={{
-								textShadow: ".25px .25px .25px #ba9467",
-							}}
-							className=" absolute z-10 text-6xl font-latienne-pro font-bold text-slate-900 mt-12"
+							style={
+								{
+									// textShadow: ".25px .25px .25px #ba9467",
+								}
+							}
+							className={`${almaraiLight.className} ml-8 uppercase absolute z-10 text-5xl xl:text-6xl font-bold text-slate-900 mt-8 w-full flex-nowrap flex`}
 						>
-							<div>Christina</div>
-							<div className="-my-4">&</div>
-							<div>Eric</div>
+							<div className="">
+								<div className=" flex flex-nowrap">
+									<span className=" flex items-end">
+										Eric
+									</span>
+									{/* <span
+										className={`${almaraiLight.className} text-4xl flex items-center justify-center pl-2`}
+									>
+										&
+									</span> */}
+								</div>
+
+								<div className={`${almaraiBold.className}`}>
+									Christina
+								</div>
+							</div>
 						</div>
 						<img
-							src="../static/Christina.jpg"
+							src="../static/Christina-bw-edit.jpg"
 							className="rounded-3xl"
 						/>
 					</SwiperSlide>
 					<SwiperSlide
 						style={{
 							display: "flex",
-							justifyContent: "center",
-							textAlign: "center",
+							justifyContent: "start",
+							textAlign: "start",
 							overflow: "hidden",
 						}}
 					>
 						<div
-							style={{
-								textShadow: ".25px .25px .25px #ba9467",
-							}}
-							className=" absolute z-10 text-6xl font-latienne-pro font-bold text-slate-900 mt-12"
+							style={
+								{
+									// textShadow: ".25px .25px .25px #ba9467",
+								}
+							}
+							className={`${almaraiLight.className} ml-8 uppercase absolute z-10 text-5xl xl:text-6xl font-bold text-slate-900 mt-8 w-full flex-nowrap flex`}
 						>
-							<div>Talia</div>
-							<div className="-my-4">&</div>
-							<div>AJ</div>
+							<div className="">
+								<div className=" flex flex-nowrap">
+									<span className=" flex items-end">AJ</span>
+									{/* <span
+										className={`${almaraiLight.className} text-4xl flex items-center justify-center pl-2`}
+									>
+										&
+									</span> */}
+								</div>
+
+								<div className={`${almaraiBold.className}`}>
+									Talia
+								</div>
+							</div>
 						</div>
 						<img
-							src="../static/Talia.jpg"
+							src="../static/Talia-bw-edit.jpg"
 							className="rounded-3xl"
 						/>
 					</SwiperSlide>
 					<SwiperSlide
 						style={{
 							display: "flex",
-							justifyContent: "center",
-							textAlign: "center",
+							justifyContent: "start",
+							textAlign: "start",
 							overflow: "hidden",
 						}}
 					>
 						<div
-							style={{
-								textShadow: ".25px .25px .25px #ba9467",
-							}}
-							className=" absolute z-10 text-6xl font-latienne-pro font-bold text-slate-900 mt-12"
+							style={
+								{
+									// textShadow: ".25px .25px .25px #ba9467",
+								}
+							}
+							className={`${almaraiLight.className} ml-8 uppercase absolute z-10 text-5xl xl:text-6xl font-bold text-slate-900 mt-8 w-full flex-nowrap flex`}
 						>
-							<div>Meredith</div>
-							<div className="-my-5">&</div>
-							<div>Connor</div>
+							<div className="">
+								<div className=" flex flex-nowrap">
+									<span className=" flex items-end">
+										Connor
+									</span>
+									{/* <span
+										className={`${almaraiLight.className} text-4xl flex items-center justify-center pl-2`}
+									>
+										&
+									</span> */}
+								</div>
+
+								<div className={`${almaraiBold.className}`}>
+									Meredith
+								</div>
+							</div>
 						</div>
 						<img
-							src="../static/Connor.jpg"
+							src="../static/Connor-bw.jpg"
 							className="rounded-3xl"
 						/>
 					</SwiperSlide>
 					<SwiperSlide
 						style={{
 							display: "flex",
-							justifyContent: "center",
-							textAlign: "center",
+							justifyContent: "start",
+							textAlign: "start",
 							overflow: "hidden",
 						}}
 					>
-						<div
+						{/* <div
 							style={{
 								textShadow: ".25px .25px .25px #ba9467",
 							}}
@@ -243,9 +299,26 @@ const Home = () => {
 							<div className="justify-center items-start flex ">
 								Fest
 							</div>
+						</div> */}
+						<div
+							style={
+								{
+									// textShadow: ".25px .25px .25px #ba9467",
+								}
+							}
+							className={`${almaraiLight.className} ml-8 uppercase absolute z-10 text-5xl xl:text-6xl font-bold text-slate-900 mt-8 w-full flex-nowrap flex`}
+						>
+							<div className="">
+								<span className=" flex items-end">Bolts</span>
+								<span className=" flex items-end">Brew</span>
+
+								<div className={`${almaraiBold.className}`}>
+									Fest
+								</div>
+							</div>
 						</div>
 						<img
-							src="../static/stanley.jpg"
+							src="../static/stanley-bw.jpg"
 							className="rounded-3xl"
 						/>
 					</SwiperSlide>

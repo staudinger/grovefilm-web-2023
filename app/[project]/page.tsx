@@ -7,6 +7,16 @@ import PageTransition from "@/components/PageTransition";
 import Logo from "@/components/Logo";
 import ProjectContextProvider, { ProjectContext } from "@/ProjectContext";
 import { useContext } from "react";
+import { Almarai } from "next/font/google";
+
+const almaraiLight = Almarai({
+	subsets: ["arabic"],
+	weight: "300",
+});
+const almaraiBold = Almarai({
+	subsets: ["arabic"],
+	weight: "800",
+});
 
 const Project = ({
 	//ref: React.ForwardedRef<HTMLDivElement>,
@@ -36,19 +46,12 @@ const Project = ({
 			></iframe>
 			<div className="flex m-8 lg:w-1/2">
 				<div
-					style={{ color: "#ba9467", fontFamily: "latienne-pro" }}
-					className="font-bold text-2xl w-full"
+					className={`${almaraiBold.className} text-2xl w-full text-secondary uppercase`}
 				>
 					{projectCtx.project.title}
 				</div>
-				<div
-					style={{ color: "#ba9467", fontFamily: "Poppins" }}
-					className="text-lg justify-end flex w-full uppercase"
-				>
-					{projectCtx.project.type}
-				</div>
 			</div>
-			<div>
+			<div className="mb-8">
 				<div>
 					{Object.entries(projectCtx.project).map((key, value) => {
 						console.log(key, value);
@@ -61,18 +64,12 @@ const Project = ({
 								<div>
 									<div className="text-white flex mx-8 my-4 lg:w-1/2">
 										<div
-											className="font-bold capitalize w-1/2"
-											style={{
-												fontFamily: "Poppins",
-											}}
+											className={`${almaraiBold.className} w-1/2 uppercase`}
 										>
 											{key[0]}
 										</div>
 										<div
-											className="italic flex justify-end w-full"
-											style={{
-												fontFamily: "Poppins",
-											}}
+											className={`${almaraiLight.className} capitalize italic flex justify-end w-full`}
 										>
 											{key[0] === "gear" &&
 											key[1][1] !== undefined
@@ -98,93 +95,6 @@ const Project = ({
 					})}
 				</div>
 			</div>
-			{/* <div className="grid grid-cols-2 ml-6">
-					<div
-						className=" text-white font-bold"
-						style={{ fontFamily: "Poppins" }}
-					>
-						Location
-					</div>
-					<div
-						className="col-start-2 text-white"
-						style={{
-							fontFamily: "Poppins",
-							fontStyle: "italic",
-						}}
-					>
-						{projectCtx.project.location}
-					</div>
-					<div className="col-span-2 mr-6">
-						<Divider
-							// variant="inset"
-							sx={{
-								marginTop: 2,
-								backgroundColor: "white",
-								marginBottom: 2,
-							}}
-						/>
-					</div>
-					<div
-						className=" text-white font-bold"
-						style={{ fontFamily: "Poppins" }}
-					>
-						Venue
-					</div>
-					<div
-						className="col-start-2 text-white"
-						style={{
-							fontFamily: "Poppins",
-							fontStyle: "italic",
-						}}
-					>
-						{projectCtx.project.venue}
-					</div>
-					<div className="col-span-2 mr-6">
-						<Divider
-							// variant="inset"
-							sx={{
-								marginTop: 2,
-								backgroundColor: "white",
-								marginBottom: 2,
-							}}
-						/>
-					</div>
-					<div
-						className=" text-white font-bold"
-						style={{ fontFamily: "Poppins" }}
-					>
-						Equipment
-					</div>
-					{projectCtx.project.equipment.map((x) => {
-						return (
-							<div
-								className="col-start-2 text-white"
-								style={{
-									fontFamily: "Poppins",
-									fontStyle: "italic",
-								}}
-							>
-								{x}
-							</div>
-						);
-					})}
-					{/* <div
-						className="col-start-2 text-white"
-						style={{ fontFamily: "Poppins" }}
-					>
-						
-					</div> */}
-			{/* <div className="col-span-2 mr-6">
-					<Divider
-						// variant="inset"
-						sx={{
-							marginTop: 2,
-							backgroundColor: "white",
-							marginBottom: 2,
-						}}
-					/>
-				</div> */}
-			{/* </div> */}
 		</div>
 		// </PageTransition>
 	);
