@@ -272,7 +272,7 @@ const Home = () => {
 							</div>
 						</div>
 						<img
-							src="../static/Connor-bw.jpg"
+							src="../static/connor-bw.jpg"
 							className="rounded-3xl"
 						/>
 					</SwiperSlide>
