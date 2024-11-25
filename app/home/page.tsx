@@ -145,7 +145,7 @@ const Home = () => {
 					modules={[Mousewheel, Autoplay]}
 					autoplay={{
 						delay: 3000,
-						disableOnInteraction: false,
+						disableOnInteraction: true,
 					}}
 					mousewheel={true}
 					speed={1000}
