@@ -27,9 +27,10 @@ const Project = ({
 	const projectCtx = useContext(ProjectContext);
 	return (
 		// <PageTransition>
-		<div className="bg-slate-900 h-screen overflow-x-hidden">
+		<div className="bg-slate-900 h-screen overflow-x-hidden ">
 			<NavBar />
-			<div className="justify-center flex items-start pt-16 xl:pt-4">
+			<div className="m-12 xl:hidden flex"></div>
+			<div className="justify-start hidden items-start pt-16 xl:pt-0 ml-8 mb-2 xl:flex">
 				<Logo color="#ba9467" />
 			</div>
 			<iframe
@@ -46,7 +47,7 @@ const Project = ({
 			></iframe>
 			<div className="flex m-8 lg:w-1/2">
 				<div
-					className={`${almaraiBold.className} text-2xl w-full text-secondary uppercase`}
+					className={`${almaraiLight.className} text-2xl w-full text-secondary uppercase`}
 				>
 					{projectCtx.project.title}
 				</div>

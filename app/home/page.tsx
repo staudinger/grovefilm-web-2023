@@ -31,6 +31,33 @@ const Home = () => {
 
 	const videos = [
 		{
+			title: "Lily & Craig",
+			id: "1032086385",
+
+			location: "Port Saint Lucie, FL",
+			venue: "Crane Club at Tesoro",
+			gear: ["Panasonic S1H", "DJI Air S2"],
+			type: "Wedding",
+		},
+		{
+			title: "Ash & Asia",
+			id: "1032096293",
+
+			location: "Chicago, IL",
+			venue: "Warwick Allerton Hotel",
+			gear: ["Panasonic S1H", "DJI Air S2"],
+			type: "Wedding",
+		},
+		{
+			title: "Emma & Evan",
+			id: "1032100369",
+
+			location: "Ybor City, FL",
+			venue: "Centro Asturiano",
+			gear: ["Panasonic S1H", "DJI Air S2"],
+			type: "Wedding",
+		},
+		{
 			title: "Zach & Almery",
 			id: "877103688",
 
@@ -81,10 +108,10 @@ const Home = () => {
 	return (
 		<div className="bg-slate-900 overflow-hidden flex flex-col">
 			<NavBar />
-			<div className="justify-center flex items-start pt-16 xl:pt-4">
+			<div className=" justify-center xl:justify-start flex xl:items-start pt-16 xl:pt-0 ml-0 xl:ml-8">
 				<Logo color="#ba9467" />
 			</div>
-			<div className="flex justify-center items-center mx-8 text-3xl xl:text-5xl mb-12">
+			<div className="flex justify-start items-center text-3xl xl:text-5xl mb-8 ml-9">
 				<div
 					style={{ color: "white" }}
 					className="w-full xl:w-3/4 border-l px-4 border-secondary"
@@ -117,8 +144,8 @@ const Home = () => {
 					}}
 					modules={[Mousewheel, Autoplay]}
 					autoplay={{
-						delay: 2000,
-						disableOnInteraction: true,
+						delay: 3000,
+						disableOnInteraction: false,
 					}}
 					mousewheel={true}
 					speed={1000}
@@ -137,13 +164,118 @@ const Home = () => {
 						}}
 					>
 						<img
-							src="../static/Almery-bw.jpg"
+							src="../static/craig.gif"
 							className="rounded-3xl"
 						/>
 						<div
-							style={{
-								textShadow: ".25px .25px .25px #ba9467",
-							}}
+							style={
+								{
+									// textShadow: ".25px .25px .25px #ba9467",
+								}
+							}
+							className={`${almaraiLight.className} ml-8 uppercase absolute z-10 text-5xl xl:text-6xl font-bold text-slate-900 mt-8 w-full flex-nowrap flex`}
+						>
+							<div className="">
+								<div className=" flex flex-nowrap">
+									<span className=" flex items-end">
+										Lily
+									</span>
+									{/* <span
+										className={`${almaraiLight.className} text-4xl flex items-center justify-center pl-2`}
+									>
+										&
+									</span> */}
+								</div>
+
+								<div className={`${almaraiBold.className}`}>
+									Craig
+								</div>
+							</div>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide
+						style={{
+							display: "flex",
+							justifyContent: "start",
+							textAlign: "start",
+							overflow: "hidden",
+						}}
+					>
+						<img src="../static/ash.gif" className="rounded-3xl" />
+						<div
+							style={
+								{
+									// textShadow: ".25px .25px .25px #ba9467",
+								}
+							}
+							className={`${almaraiLight.className} ml-8 uppercase absolute z-10 text-5xl xl:text-6xl font-bold text-slate-900 mt-8 w-full flex-nowrap flex`}
+						>
+							<div className="">
+								<div className=" flex flex-nowrap">
+									<span className=" flex items-end">Ash</span>
+									{/* <span
+										className={`${almaraiLight.className} text-4xl flex items-center justify-center pl-2`}
+									>
+										&
+									</span> */}
+								</div>
+
+								<div className={`${almaraiBold.className}`}>
+									Asia
+								</div>
+							</div>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide
+						style={{
+							display: "flex",
+							justifyContent: "start",
+							textAlign: "start",
+							overflow: "hidden",
+						}}
+					>
+						<img src="../static/evan.gif" className="rounded-3xl" />
+						<div
+							style={
+								{
+									// textShadow: ".25px .25px .25px #ba9467",
+								}
+							}
+							className={`${almaraiLight.className} ml-8 uppercase absolute z-10 text-5xl xl:text-6xl font-bold text-slate-900 mt-8 w-full flex-nowrap flex`}
+						>
+							<div className="">
+								<div className=" flex flex-nowrap">
+									<span className=" flex items-end">
+										Evan
+									</span>
+									{/* <span
+										className={`${almaraiLight.className} text-4xl flex items-center justify-center pl-2`}
+									>
+										&
+									</span> */}
+								</div>
+
+								<div className={`${almaraiBold.className}`}>
+									Emma
+								</div>
+							</div>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide
+						style={{
+							display: "flex",
+							justifyContent: "start",
+							textAlign: "start",
+							overflow: "hidden",
+						}}
+					>
+						<img src="../static/zach.gif" className="rounded-3xl" />
+						<div
+							style={
+								{
+									// textShadow: ".25px .25px .25px #ba9467",
+								}
+							}
 							className={`${almaraiLight.className} ml-8 uppercase absolute z-10 text-5xl xl:text-6xl font-bold text-slate-900 mt-8 w-full flex-nowrap flex`}
 						>
 							<div className="">
@@ -197,10 +329,7 @@ const Home = () => {
 								</div>
 							</div>
 						</div>
-						<img
-							src="../static/Christina-bw-edit.jpg"
-							className="rounded-3xl"
-						/>
+						<img src="../static/eric.gif" className="rounded-3xl" />
 					</SwiperSlide>
 					<SwiperSlide
 						style={{
@@ -233,10 +362,7 @@ const Home = () => {
 								</div>
 							</div>
 						</div>
-						<img
-							src="../static/Talia-bw-edit.jpg"
-							className="rounded-3xl"
-						/>
+						<img src="../static/aj.gif" className="rounded-3xl" />
 					</SwiperSlide>
 					<SwiperSlide
 						style={{
@@ -272,7 +398,7 @@ const Home = () => {
 							</div>
 						</div>
 						<img
-							src="../static/connor-bw.jpg"
+							src="../static/connor.gif"
 							className="rounded-3xl"
 						/>
 					</SwiperSlide>
@@ -318,7 +444,7 @@ const Home = () => {
 							</div>
 						</div>
 						<img
-							src="../static/stanley-bw.jpg"
+							src="../static/bolts.gif"
 							className="rounded-3xl"
 						/>
 					</SwiperSlide>

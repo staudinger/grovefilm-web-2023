@@ -58,7 +58,7 @@ export default function NavBar() {
 				position="fixed"
 				style={{ boxShadow: "none" }}
 			>
-				<div className=" justify-center xl:justify-end items-center flex pr-4">
+				<div className=" justify-center xl:justify-end items-center flex pr-0 xl:pr-7 pt-5">
 					<Button
 						onClick={() => {
 							router.push("/home");
@@ -73,7 +73,6 @@ export default function NavBar() {
 						}}
 						sx={{
 							color: "#ba9467",
-							fontWeight: "bold",
 							textShadow: "1px 1px 2px #0f172a",
 						}}
 					>
@@ -87,7 +86,6 @@ export default function NavBar() {
 						}}
 						sx={{
 							color: "#ba9467",
-							fontWeight: "bold",
 							textShadow: "1px 1px 2px #0f172a",
 						}}
 					>

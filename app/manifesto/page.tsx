@@ -26,7 +26,9 @@ const Manifesto = () => {
 		<PageTransition>
 			<div className="bg-slate-900 h-screen">
 				<NavBar />
-				<div className="justify-center flex items-start pt-16 xl:pt-4">
+				<div className="xl:hidden flex m-12 mb-16"></div>
+
+				<div className="justify-start hidden items-start pt-16 xl:pt-0 ml-8 mb-2 xl:flex">
 					<Logo color="#ba9467" />
 				</div>
 
