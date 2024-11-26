@@ -331,7 +331,7 @@ const Home = () => {
 						</div>
 						<img src="../static/eric.gif" className="rounded-3xl" />
 					</SwiperSlide>
-					<SwiperSlide
+					{/* <SwiperSlide
 						style={{
 							display: "flex",
 							justifyContent: "start",
@@ -350,11 +350,7 @@ const Home = () => {
 							<div className="">
 								<div className=" flex flex-nowrap">
 									<span className=" flex items-end">AJ</span>
-									{/* <span
-										className={`${almaraiLight.className} text-4xl flex items-center justify-center pl-2`}
-									>
-										&
-									</span> */}
+								
 								</div>
 
 								<div className={`${almaraiBold.className}`}>
@@ -363,8 +359,8 @@ const Home = () => {
 							</div>
 						</div>
 						<img src="../static/aj.gif" className="rounded-3xl" />
-					</SwiperSlide>
-					<SwiperSlide
+					</SwiperSlide> */}
+					{/* <SwiperSlide
 						style={{
 							display: "flex",
 							justifyContent: "start",
@@ -385,11 +381,7 @@ const Home = () => {
 									<span className=" flex items-end">
 										Connor
 									</span>
-									{/* <span
-										className={`${almaraiLight.className} text-4xl flex items-center justify-center pl-2`}
-									>
-										&
-									</span> */}
+								
 								</div>
 
 								<div className={`${almaraiBold.className}`}>
@@ -400,9 +392,9 @@ const Home = () => {
 						<img
 							src="../static/connor.gif"
 							className="rounded-3xl"
-						/>
-					</SwiperSlide>
-					<SwiperSlide
+						/> 
+					</SwiperSlide> */}
+					{/* <SwiperSlide
 						style={{
 							display: "flex",
 							justifyContent: "start",
@@ -410,22 +402,7 @@ const Home = () => {
 							overflow: "hidden",
 						}}
 					>
-						{/* <div
-							style={{
-								textShadow: ".25px .25px .25px #ba9467",
-							}}
-							className=" absolute text-6xl font-latienne-pro font-bold text-slate-900 mt-12 flex flex-col h-full"
-						>
-							<div className="justify-center items-end flex h-3/5">
-								Bolts
-							</div>
-							<div className="justify-center items-start flex -m-4">
-								Brew
-							</div>
-							<div className="justify-center items-start flex ">
-								Fest
-							</div>
-						</div> */}
+						
 						<div
 							style={
 								{
@@ -447,7 +424,7 @@ const Home = () => {
 							src="../static/bolts.gif"
 							className="rounded-3xl"
 						/>
-					</SwiperSlide>
+					</SwiperSlide> */}
 				</Swiper>
 			</div>
 		</div>
