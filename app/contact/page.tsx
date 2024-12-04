@@ -6,7 +6,6 @@ import {} from "@mui/material/colors";
 import "@fontsource/poppins";
 import { Email, Smartphone } from "@mui/icons-material";
 import NavBar from "@/components/NavBar";
-import PageTransition from "@/components/PageTransition";
 import Logo from "@/components/Logo";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -104,6 +103,7 @@ const Contact = () => {
 				createStamp.getSeconds() +
 				":" +
 				createStamp.getMilliseconds();
+
 			const docRef = await setDoc(doc(db, "messages", datetime), {
 				name: name,
 				email: email,
@@ -129,17 +129,14 @@ const Contact = () => {
 		palette: {
 			primary: {
 				main: "#FFFFFF",
-				// light: will be calculated from palette.primary.main,
-				// dark: will be calculated from palette.primary.main,
-				// contrastText: will be calculated to contrast with palette.primary.main
 			},
 			secondary: {
 				main: "#ba9467",
 			},
 		},
 	});
+
 	return (
-		// <PageTransition>
 		<LocalizationProvider dateAdapter={AdapterDayjs}>
 			<div className="bg-slate-900 h-screen">
 				<ThemeProvider theme={theme}>
@@ -149,7 +146,6 @@ const Contact = () => {
 						<Logo color="#ba9467" />
 					</div>
 					<div className="-mt-1">
-						{/* <div className="col-start-1 col-span-2 flex justify-center"> */}
 						<form ref={form} onSubmit={sendMessage}>
 							<div className="flex justify-center">
 								<TextField
@@ -294,11 +290,9 @@ const Contact = () => {
 								/>
 							</div>
 							<div
-								className={`${almaraiBold.className} uppercase flex justify-center
-							text-3xl mt-4 tracking-tight`}
+								className={`${almaraiBold.className} uppercase flex justify-center text-3xl mt-4 tracking-tight`}
 								style={{
 									color: "#ba9467",
-									// fontFamily: "Poppins",
 								}}
 							>
 								Dear Grovefilm,
@@ -330,17 +324,19 @@ const Contact = () => {
 									value={message}
 								/>
 							</div>
-							<div
-								className={`${almaraiBold.className} uppercase mb-12 flex justify-center`}
-							>
-								<Button sx={{}} variant="text" type="submit">
+							<div className="uppercase mb-12 flex justify-center">
+								<Button
+									className={`${almaraiBold.className}`}
+									variant="text"
+									type="submit"
+								>
 									Send Email
 								</Button>
 							</div>
 						</form>
-					</div>{" "}
+					</div>
 					<div
-						className={`${almaraiBold.className} font-bold grid grid-cols-1 mx-8`}
+						className={`${almaraiBold.className} uppercase font-bold grid grid-cols-1 mx-8`}
 						style={{ color: "#ba9467" }}
 					>
 						<div>
@@ -353,7 +349,6 @@ const Contact = () => {
 				</ThemeProvider>
 			</div>
 		</LocalizationProvider>
-		// </PageTransition>
 	);
 };
 

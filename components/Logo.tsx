@@ -1,12 +1,5 @@
-import { Button } from "@mui/material";
-import { useRouter } from "next/navigation";
-
 const Logo = ({ color = "#ba9467" }: { color: string }) => {
-	const router = useRouter();
-
 	return (
-		// <div className="flex justify-center mt-20 mb-4">
-
 		<div className="flex justify-center items-center mb-4 mt-7">
 			<div
 				style={{

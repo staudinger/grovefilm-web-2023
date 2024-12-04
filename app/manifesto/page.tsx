@@ -3,9 +3,8 @@
 import Logo from "@/components/Logo";
 import NavBar from "@/components/NavBar";
 import PageTransition from "@/components/PageTransition";
-import "@fontsource/poppins";
 import { Almarai } from "next/font/google";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const almaraiBold = Almarai({
 	subsets: ["arabic"],
@@ -60,10 +59,6 @@ const Manifesto = () => {
 						}}
 						className="absolute font-bold h-full flex justify-center items-center lg:text-center mx-8 lg:mx-58 "
 					>
-						{/* The start of a season. The end of an era. Smooching in
-						sunshine. Wrestling in rain. Your story is weaved with
-						these moments. Grovefilm is here to tell that story. We are here so you can relive the moments you never want to
-						forget. &mdash; Peter Staudinger, Founder. */}
 						<div className="flex justify-center items-center mx-8 text-2xl xl:text-5xl mb-12">
 							<div
 								style={{ color: "white" }}
@@ -74,14 +69,14 @@ const Manifesto = () => {
 								>
 									Start of a season. End of an era. Smooching
 									in sunshine. Wrestling in rain. Your story
-									is weaved with these moments.{" "}
+									is weaved with these moments.
 								</span>
 								<span
 									className={`${almaraiBold.className} uppercase`}
 								>
 									Grovefilm is here to tell that story, so you
 									can relive the moments you never want to
-									forget{" "}
+									forget.
 								</span>
 							</div>
 						</div>

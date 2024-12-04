@@ -1,9 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import ProjectContextProvider from "@/ProjectContext";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
 	title: "Grovefilm",
@@ -18,13 +15,14 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<head>
+				{/* imports latienne pro font */}
 				<link
 					rel="stylesheet"
 					href="https://use.typekit.net/heo3ekj.css"
 				/>
 			</head>
-			<body className="bg-slate-900 w-screen">
-				{" "}
+			<body className="bg-slate-900">
+				{/* react context provider for project details */}
 				<ProjectContextProvider>{children}</ProjectContextProvider>
 			</body>
 		</html>

@@ -1,10 +1,15 @@
 "use client";
-import Logo from "@/components/Logo";
-import "@fontsource/poppins";
-import { Button } from "@mui/material";
 
+import Logo from "@/components/Logo";
+import { Button } from "@mui/material";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
+import { Almarai } from "next/font/google";
+
+const almaraiBold = Almarai({
+	subsets: ["arabic"],
+	weight: "800",
+});
 
 const Splash = () => {
 	const router = useRouter();
@@ -15,20 +20,29 @@ const Splash = () => {
 		};
 	}, []);
 
+	//state to set logo display prop;
 	const [display, setDisplay] = useState("flex");
+
+	//state to set logo color
 	const [color, setColor] = useState("#ba9467");
-	function toggleText() {
-		setDisplay(display === "none" ? "flex" : "none");
+
+	// alternates logo display prop from hidden to flex
+	function switchdisplay() {
+		setDisplay(display === "hidden" ? "flex" : "hidden");
 	}
-	function toggleColor() {
+
+	//alternates logo color from secondary to primary
+	function switchColor() {
 		setColor(color === "#0f172a" ? "#ba9467" : "#0f172a");
 	}
 
-	setInterval(toggleText, 6000); // Toggle every 1 second
-	setInterval(toggleColor, 8000);
+	//calls switchDisplay and SwitchColor on intervals
+	setInterval(switchdisplay, 6000);
+	setInterval(switchColor, 8000);
 
 	return (
-		<div className="h-screen">
+		<div>
+			{/* mobile video */}
 			<video
 				playsInline
 				autoPlay
@@ -42,6 +56,7 @@ const Splash = () => {
 					type="video/mp4"
 				/>
 			</video>
+			{/* desktop video */}
 			<video
 				playsInline
 				autoPlay
@@ -56,35 +71,27 @@ const Splash = () => {
 				/>
 			</video>
 
-			<div className=" flex grid grid-cols-3  grid-rows-3 h-screen">
-				<div className="justify-center items-center row-start-2 flex col-start-2 ">
-					<div
-						style={{
-							display: display,
-						}}
-					>
+			<div className="flex grid grid-cols-3 grid-rows-3 h-screen">
+				<div className="justify-center items-center row-start-2 flex col-start-2">
+					<div className={`${display}`}>
 						<Logo color={color} />
 					</div>
 				</div>
-				<div className="flex justify-center col-start-1 row-span-3 col-span-2 items-start flex-col">
-					<div
-						className=" font-bold ml-8 lg:ml-16"
-						style={{
-							fontFamily: "Poppins",
-							textShadow: ".5px .5px 1px #0f172a",
-							color: "#ba9467",
-						}}
-					>
-						Boutique Film Makers
-					</div>
+
+				<div
+					className={`${almaraiBold.className} text-secondary uppercase flex justify-center col-start-1 row-span-3 col-span-2 items-start flex-col`}
+				>
+					<div className="ml-8 lg:ml-16">Boutique Film Makers</div>
 				</div>
-				<div className="flex justify-center col-start-3 row-start-3 items-end flex-col mr-8 lg:mr-16">
+
+				<div
+					className={`flex justify-center col-start-3 row-start-3 items-end flex-col mr-8 lg:mr-16`}
+				>
 					<Button
+						className={`${almaraiBold.className}`}
 						sx={{
 							color: "#ba9467",
-							fontFamily: "Poppins",
 							fontWeight: "bold",
-							textShadow: ".5px .5px 1px #0f172a",
 						}}
 						onClick={() => {
 							router.push("/home");
@@ -95,7 +102,6 @@ const Splash = () => {
 				</div>
 			</div>
 		</div>
-		// </PageTransition>
 	);
 };
 

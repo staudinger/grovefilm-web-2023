@@ -1,15 +1,12 @@
 "use client";
 
 import NavBar from "@/components/NavBar";
-
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/scrollbar";
-import { Scrollbar, Mousewheel, Autoplay } from "swiper/modules";
+import { Mousewheel, Autoplay } from "swiper/modules";
 import "@fontsource/poppins";
 import { useState, useContext } from "react";
-
-import { Button } from "@mui/material";
 import { useRouter } from "next/navigation";
 import Logo from "@/components/Logo";
 import { ProjectContext } from "@/ProjectContext";
@@ -23,48 +20,40 @@ const almaraiBold = Almarai({
 	subsets: ["arabic"],
 	weight: "800",
 });
-const Home = () => {
-	const [checked, setChecked] = useState(false);
 
+const Home = () => {
 	const [swiper, setSwiper] = useState<any>(null);
 	const projectCtx = useContext(ProjectContext);
 
-	const videos = [
+	//projects
+	const projects = [
 		{
 			title: "Lily & Craig",
 			id: "1032086385",
-
 			location: "Port Saint Lucie, FL",
 			venue: "Crane Club at Tesoro",
 			gear: ["Panasonic S1H", "DJI Air S2"],
-			type: "Wedding",
 		},
 		{
 			title: "Ash & Asia",
 			id: "1032096293",
-
 			location: "Chicago, IL",
 			venue: "Warwick Allerton Hotel",
 			gear: ["Panasonic S1H", "DJI Air S2"],
-			type: "Wedding",
 		},
 		{
 			title: "Emma & Evan",
 			id: "1032100369",
-
 			location: "Ybor City, FL",
 			venue: "Centro Asturiano",
 			gear: ["Panasonic S1H", "DJI Air S2"],
-			type: "Wedding",
 		},
 		{
 			title: "Zach & Almery",
 			id: "877103688",
-
 			location: "St. Pete Beach, FL",
 			venue: "The Don CeSar",
 			gear: ["Panasonic S1H"],
-			type: "Wedding",
 		},
 		{
 			title: "Eric & Christina",
@@ -72,8 +61,6 @@ const Home = () => {
 			location: "Winter Park, CO",
 			venue: "Winter Park Resort",
 			gear: ["Panasonic S1H", "DJI Air S2"],
-
-			type: "Wedding",
 		},
 		{
 			title: "AJ & Talia",
@@ -81,8 +68,6 @@ const Home = () => {
 			location: "St. Petersburg, FL",
 			venue: "The Birchwood / Sunken Gardens",
 			gear: ["Panasonic S1H", "DJI Air S2"],
-
-			type: "Wedding",
 		},
 		{
 			title: "Connor & Meredith",
@@ -90,8 +75,6 @@ const Home = () => {
 			location: "Chicago, IL",
 			venue: "Green House Loft",
 			gear: ["Panasonic S1H", "DJI Air S2"],
-
-			type: "Wedding",
 		},
 		{
 			title: "Bolts Brew Fest",
@@ -99,23 +82,19 @@ const Home = () => {
 			location: "Tampa, FL",
 			venue: "Amalie Arena",
 			gear: ["Panasonic S1H", "DJI Air S2"],
-
-			type: "Commercial",
 		},
 	];
 
 	const router = useRouter();
+
 	return (
 		<div className="bg-slate-900 overflow-hidden flex flex-col">
 			<NavBar />
-			<div className=" justify-center xl:justify-start flex xl:items-start pt-16 xl:pt-0 ml-0 xl:ml-8">
+			<div className="justify-center xl:justify-start flex xl:items-start pt-16 xl:pt-0 ml-0 xl:ml-8">
 				<Logo color="#ba9467" />
 			</div>
-			<div className="flex justify-start items-center text-3xl xl:text-5xl mb-8 ml-9">
-				<div
-					style={{ color: "white" }}
-					className="w-full xl:w-3/4 border-l px-4 border-secondary"
-				>
+			<div className=" text-white flex justify-start items-center text-3xl xl:text-5xl mb-8 ml-9">
+				<div className="w-full xl:w-3/4 border-l px-4 border-secondary">
 					<span className={`${almaraiLight.className} uppercase`}>
 						Boutique film makers.&nbsp;
 					</span>
@@ -144,14 +123,14 @@ const Home = () => {
 					}}
 					modules={[Mousewheel, Autoplay]}
 					autoplay={{
-						delay: 3000,
-						disableOnInteraction: true,
+						delay: 4000,
+						disableOnInteraction: false,
 					}}
 					mousewheel={true}
 					speed={1000}
 					onClick={() => {
-						projectCtx.setProject(videos[swiper.clickedIndex]);
-						router.push("/" + videos[swiper.clickedIndex].id);
+						projectCtx.setProject(projects[swiper.clickedIndex]);
+						router.push("/" + projects[swiper.clickedIndex].id);
 					}}
 					style={{ overflow: "hidden", cursor: "pointer" }}
 				>
@@ -168,23 +147,11 @@ const Home = () => {
 							className="rounded-3xl"
 						/>
 						<div
-							style={
-								{
-									// textShadow: ".25px .25px .25px #ba9467",
-								}
-							}
 							className={`${almaraiLight.className} ml-8 uppercase absolute z-10 text-5xl xl:text-6xl font-bold text-slate-900 mt-8 w-full flex-nowrap flex`}
 						>
-							<div className="">
-								<div className=" flex flex-nowrap">
-									<span className=" flex items-end">
-										Lily
-									</span>
-									{/* <span
-										className={`${almaraiLight.className} text-4xl flex items-center justify-center pl-2`}
-									>
-										&
-									</span> */}
+							<div>
+								<div className="flex flex-nowrap">
+									<span className="flex items-end">Lily</span>
 								</div>
 
 								<div className={`${almaraiBold.className}`}>
@@ -331,104 +298,9 @@ const Home = () => {
 						</div>
 						<img src="../static/eric.gif" className="rounded-3xl" />
 					</SwiperSlide>
-					{/* <SwiperSlide
-						style={{
-							display: "flex",
-							justifyContent: "start",
-							textAlign: "start",
-							overflow: "hidden",
-						}}
-					>
-						<div
-							style={
-								{
-									// textShadow: ".25px .25px .25px #ba9467",
-								}
-							}
-							className={`${almaraiLight.className} ml-8 uppercase absolute z-10 text-5xl xl:text-6xl font-bold text-slate-900 mt-8 w-full flex-nowrap flex`}
-						>
-							<div className="">
-								<div className=" flex flex-nowrap">
-									<span className=" flex items-end">AJ</span>
-								
-								</div>
-
-								<div className={`${almaraiBold.className}`}>
-									Talia
-								</div>
-							</div>
-						</div>
-						<img src="../static/aj.gif" className="rounded-3xl" />
-					</SwiperSlide> */}
-					{/* <SwiperSlide
-						style={{
-							display: "flex",
-							justifyContent: "start",
-							textAlign: "start",
-							overflow: "hidden",
-						}}
-					>
-						<div
-							style={
-								{
-									// textShadow: ".25px .25px .25px #ba9467",
-								}
-							}
-							className={`${almaraiLight.className} ml-8 uppercase absolute z-10 text-5xl xl:text-6xl font-bold text-slate-900 mt-8 w-full flex-nowrap flex`}
-						>
-							<div className="">
-								<div className=" flex flex-nowrap">
-									<span className=" flex items-end">
-										Connor
-									</span>
-								
-								</div>
-
-								<div className={`${almaraiBold.className}`}>
-									Meredith
-								</div>
-							</div>
-						</div>
-						<img
-							src="../static/connor.gif"
-							className="rounded-3xl"
-						/> 
-					</SwiperSlide> */}
-					{/* <SwiperSlide
-						style={{
-							display: "flex",
-							justifyContent: "start",
-							textAlign: "start",
-							overflow: "hidden",
-						}}
-					>
-						
-						<div
-							style={
-								{
-									// textShadow: ".25px .25px .25px #ba9467",
-								}
-							}
-							className={`${almaraiLight.className} ml-8 uppercase absolute z-10 text-5xl xl:text-6xl font-bold text-slate-900 mt-8 w-full flex-nowrap flex`}
-						>
-							<div className="">
-								<span className=" flex items-end">Bolts</span>
-								<span className=" flex items-end">Brew</span>
-
-								<div className={`${almaraiBold.className}`}>
-									Fest
-								</div>
-							</div>
-						</div>
-						<img
-							src="../static/bolts.gif"
-							className="rounded-3xl"
-						/>
-					</SwiperSlide> */}
 				</Swiper>
 			</div>
 		</div>
-		// </PageTransition>
 	);
 };
 

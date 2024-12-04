@@ -3,9 +3,8 @@
 import NavBar from "@/components/NavBar";
 import "@fontsource/poppins";
 import { Divider } from "@mui/material";
-import PageTransition from "@/components/PageTransition";
 import Logo from "@/components/Logo";
-import ProjectContextProvider, { ProjectContext } from "@/ProjectContext";
+import { ProjectContext } from "@/ProjectContext";
 import { useContext } from "react";
 import { Almarai } from "next/font/google";
 
@@ -18,15 +17,9 @@ const almaraiBold = Almarai({
 	weight: "800",
 });
 
-const Project = ({
-	//ref: React.ForwardedRef<HTMLDivElement>,
-	params,
-}: {
-	params: { project: string };
-}) => {
+const Project = ({ params }: { params: { project: string } }) => {
 	const projectCtx = useContext(ProjectContext);
 	return (
-		// <PageTransition>
 		<div className="bg-slate-900 h-screen overflow-x-hidden ">
 			<NavBar />
 			<div className="m-12 xl:hidden flex"></div>
@@ -55,7 +48,6 @@ const Project = ({
 			<div className="mb-8">
 				<div>
 					{Object.entries(projectCtx.project).map((key, value) => {
-						console.log(key, value);
 						if (
 							key[0] !== "id" &&
 							key[0] !== "title" &&
@@ -65,12 +57,12 @@ const Project = ({
 								<div>
 									<div className="text-white flex mx-8 my-4 lg:w-1/2">
 										<div
-											className={`${almaraiBold.className} w-1/2 uppercase`}
+											className={`${almaraiBold.className} text-2xl w-1/2 uppercase`}
 										>
 											{key[0]}
 										</div>
 										<div
-											className={`${almaraiLight.className} capitalize italic flex justify-end w-full`}
+											className={`${almaraiLight.className} capitalize flex items-center justify-end w-full`}
 										>
 											{key[0] === "gear" &&
 											key[1][1] !== undefined
@@ -97,7 +89,6 @@ const Project = ({
 				</div>
 			</div>
 		</div>
-		// </PageTransition>
 	);
 };
 

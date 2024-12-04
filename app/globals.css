@@ -1,36 +1,7 @@
-@import url("https://p.typekit.net/p.css?s=1&k=heo3ekj&ht=tk&f=23550.23555.23556.23559&a=3341263&app=typekit&e=css");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-	--foreground-rgb: 15, 23, 42;
-	--background-start-rgb: 15, 23, 42;
-	--background-end-rgb: 15, 23, 42;
-}
-
-/* @media (prefers-color-scheme: dark) {
-	:root {
-		--foreground-rgb: 255, 255, 255;
-		--background-start-rgb: 0, 0, 0;
-		--background-end-rgb: 0, 0, 0;
-	}
-} */
-
-body {
-	color: rgb(var(--foreground-rgb));
-	/* background: linear-gradient(
-			to bottom,
-			transparent,
-			rgb(var(--background-end-rgb))
-		) */
-	background: rgb(var(--background-start-rgb));
-}
-
-/* html {
-	overflow: hidden;
-} */
 ::-webkit-scrollbar {
 	width: 0; /* Remove scrollbar space */
 	background: transparent; /* Optional: just make scrollbar invisible */
