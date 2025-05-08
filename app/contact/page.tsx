@@ -187,7 +187,7 @@ const Contact = () => {
 							<Logo color="#ba9467" />
 						</Button>
 					</div>
-					<div className="h-screen flex justify-center items-center">
+					<div className="h-full flex justify-center items-center flex-wrap pt-20">
 						<form ref={form} onSubmit={sendMessage}>
 							<div className="w-full flex justify-center pb-4 xl:w-full">
 								<TextField
@@ -408,7 +408,7 @@ const Contact = () => {
 									value={message}
 								/>
 							</div>
-							<div className="uppercase mb-12 mt-8 flex justify-center">
+							<div className="uppercase mt-8 flex justify-center">
 								<Button
 									style={{
 										color: yellow,
@@ -427,20 +427,20 @@ const Contact = () => {
 								</Button>
 							</div>
 						</form>
-					</div>
-					<div
-						className={`${almaraiBold.className} uppercase fixed bottom-0 mb-8 font-bold text-red w-full pr-8`}
-					>
-						<div className="pl-8">
-							<Email /> &mdash; peter@grovefilm.com
-						</div>
-						<div className="flex flex-wrap">
-							<div className="pl-8 w-1/2">
-								<Smartphone /> &mdash; 863 207 8684
+						<div
+							className={`${almaraiBold.className} uppercase flex flex-wrap justify-end items-end text-red w-full pr-8 pt-16`}
+						>
+							<div className="w-full pl-8 pb-1">
+								<Email /> &mdash; peter@grovefilm.com
 							</div>
-							<span className="flex xl:justify-end justify-start xl:pr-8 pl-8 xl:w-1/2 w-full">
-								<PlaceRounded /> &mdash; ST PETE FL / BEYOND
-							</span>
+							<div className="flex flex-wrap w-full">
+								<div className="pl-8 w-1/2 pb-1 flex justify-start">
+									<Smartphone /> &mdash; 863 207 8684
+								</div>
+								<span className="flex xl:justify-end justify-start xl:pr-8 pl-8 xl:w-1/2 w-full">
+									<PlaceRounded /> &mdash; ST PETE FL / BEYOND
+								</span>
+							</div>
 						</div>
 					</div>
 				</ThemeProvider>
