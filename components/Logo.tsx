@@ -1,40 +1,41 @@
+import { Button } from "@mui/material";
+import { useRouter } from "next/navigation";
+
 const Logo = ({ color = "#ba9467" }: { color: string }) => {
+	const router = useRouter();
+
 	return (
-		<div className="flex justify-center items-center mb-4 mt-7">
+		<div className="flex justify-center items-center mb-4 mt-4">
 			<div
-				style={{
-					color: color,
-				}}
-				className="tracking-tighter font-latienne-pro text-white font-bold text-3xl xl:text-5xl capitalize"
+				// style={{
+				// 	color: color,
+				// }}
+				className="tracking-tighter font-latienne-pro font-bold text-3xl xl:text-5xl capitalize text-orange"
 			>
 				Grove
 			</div>
 			<div
 				style={{
-					color: color,
+					// color: color,
 					letterSpacing: "-.1em",
 				}}
-				className="font-latienne-pro text-white font-bold text-3xl xl:text-5xl"
+				className="font-latienne-pro font-bold text-3xl xl:text-5xl text-orange lowercase"
 			>
 				f
 			</div>
 			<div
 				style={{
 					paddingTop: 1,
-					color: color,
+					// color: color,
 				}}
-				className="tracking-tighter font-latienne-pro text-white font-bold text-3xl xl:text-5xl"
+				className="tracking-tighter font-latienne-pro font-bold text-3xl xl:text-5xl text-orange lowercase"
 			>
 				i
 			</div>
-			<div
-				style={{
-					color: color,
-				}}
-				className="tracking-tighter font-latienne-pro text-white font-bold text-3xl xl:text-5xl"
-			>
+			<div className="tracking-tighter font-latienne-pro font-bold text-3xl xl:text-5xl text-orange lowercase">
 				lm
 			</div>
+			<img src="../static/handsWhite.png" width="80px" />
 		</div>
 	);
 };

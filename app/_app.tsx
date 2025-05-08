@@ -5,7 +5,7 @@ export default function App({ Component, pageProps }: AppProps) {
 	const router = useRouter();
 
 	return (
-		<div className="bg-slate-900">
+		<div className="bg-black">
 			<Component {...pageProps} />
 		</div>
 	);

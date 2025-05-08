@@ -1,108 +1,344 @@
 "use client";
 
-import Logo from "@/components/Logo";
-import { Button } from "@mui/material";
+import NavBar from "@/components/NavBar";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/scrollbar";
+import { Mousewheel, Autoplay } from "swiper/modules";
+import "@fontsource/poppins";
+import { useState, useContext } from "react";
 import { useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
+import Logo from "@/components/Logo";
+import { ProjectContext } from "@/ProjectContext";
 import { Almarai } from "next/font/google";
 
+const almaraiLight = Almarai({
+	subsets: ["arabic"],
+	weight: "300",
+});
 const almaraiBold = Almarai({
 	subsets: ["arabic"],
 	weight: "800",
 });
 
-const Splash = () => {
+const Home = () => {
+	const [swiper, setSwiper] = useState<any>(null);
+	const projectCtx = useContext(ProjectContext);
+
+	//projects
+	const projects = [
+		{
+			title: "Lily & Craig",
+			id: "1032086385",
+			location: "Port Saint Lucie, FL",
+			venue: "Crane Club at Tesoro",
+			gear: ["Panasonic S1H", "DJI Air S2"],
+		},
+		{
+			title: "Ash & Asia",
+			id: "1032096293",
+			location: "Chicago, IL",
+			venue: "Warwick Allerton Hotel",
+			gear: ["Panasonic S1H", "DJI Air S2"],
+		},
+		{
+			title: "Emma & Evan",
+			id: "1032100369",
+			location: "Ybor City, FL",
+			venue: "Centro Asturiano",
+			gear: ["Panasonic S1H", "DJI Air S2"],
+		},
+		{
+			title: "Zach & Almery",
+			id: "877103688",
+			location: "St. Pete Beach, FL",
+			venue: "The Don CeSar",
+			gear: ["Panasonic S1H"],
+		},
+		{
+			title: "Eric & Christina",
+			id: "877111610",
+			location: "Winter Park, CO",
+			venue: "Winter Park Resort",
+			gear: ["Panasonic S1H", "DJI Air S2"],
+		},
+		{
+			title: "AJ & Talia",
+			id: "877101187",
+			location: "St. Petersburg, FL",
+			venue: "The Birchwood / Sunken Gardens",
+			gear: ["Panasonic S1H", "DJI Air S2"],
+		},
+		{
+			title: "Connor & Meredith",
+			id: "713488531",
+			location: "Chicago, IL",
+			venue: "Green House Loft",
+			gear: ["Panasonic S1H", "DJI Air S2"],
+		},
+		{
+			title: "Bolts Brew Fest",
+			id: "877123147",
+			location: "Tampa, FL",
+			venue: "Amalie Arena",
+			gear: ["Panasonic S1H", "DJI Air S2"],
+		},
+	];
+
 	const router = useRouter();
-	useEffect(() => {
-		const timeout = setTimeout(() => router.push("/home"), 19000);
-		return () => {
-			clearTimeout(timeout);
-		};
-	}, []);
-
-	//state to set logo display prop;
-	const [display, setDisplay] = useState("flex");
-
-	//state to set logo color
-	const [color, setColor] = useState("#ba9467");
-
-	// alternates logo display prop from hidden to flex
-	function switchdisplay() {
-		setDisplay(display === "hidden" ? "flex" : "hidden");
-	}
-
-	//alternates logo color from secondary to primary
-	function switchColor() {
-		setColor(color === "#0f172a" ? "#ba9467" : "#0f172a");
-	}
-
-	//calls switchDisplay and SwitchColor on intervals
-	setInterval(switchdisplay, 6000);
-	setInterval(switchColor, 8000);
 
 	return (
-		<div>
-			{/* mobile video */}
-			<video
-				playsInline
-				autoPlay
-				muted
-				loop
-				poster="../../static/background.PNG"
-				className="w-full h-full -z-10 fixed object-cover block md:hidden"
-			>
-				<source
-					src={"../../static/2023ReelMobile.mp4"}
-					type="video/mp4"
-				/>
-			</video>
-			{/* desktop video */}
-			<video
-				playsInline
-				autoPlay
-				muted
-				loop
-				poster="../../static/background.PNG"
-				className="w-full h-full -z-10 fixed object-cover hidden sm:hidden md:block lg:block xl:block"
-			>
-				<source
-					src={"../../static/2023ReelDesktop.mp4"}
-					type="video/mp4"
-				/>
-			</video>
-
-			<div className="flex grid grid-cols-3 grid-rows-3 h-screen">
-				<div className="justify-center items-center row-start-2 flex col-start-2">
-					<div className={`${display}`}>
-						<Logo color={color} />
-					</div>
-				</div>
-
-				<div
-					className={`${almaraiBold.className} text-secondary uppercase flex justify-center col-start-1 row-span-3 col-span-2 items-start flex-col`}
-				>
-					<div className="ml-8 lg:ml-16">Boutique Film Makers</div>
-				</div>
-
-				<div
-					className={`flex justify-center col-start-3 row-start-3 items-end flex-col mr-8 lg:mr-16`}
-				>
-					<Button
-						className={`${almaraiBold.className}`}
-						sx={{
-							color: "#ba9467",
-							fontWeight: "bold",
-						}}
-						onClick={() => {
-							router.push("/home");
-						}}
+		<div className="bg-black overflow-hidden flex flex-col">
+			<NavBar />
+			<div className="py-1 pl-8 z-20 xl:w-4/5 flex fixed">
+				<Logo color="#ba9467" />
+			</div>
+			{/* <div className="justify-center xl:justify-start flex xl:items-start pt-16 xl:pt-0 ml-0 xl:ml-8">
+				<Logo color="#ba9467" />
+			</div> */}
+			<div className="grid-rows-3 grid-flow-col xl:grid hidden">
+				<div className="col-start-1 row-start-1 row-span-3">
+					<video
+						playsInline
+						autoPlay
+						muted
+						loop
+						className="w-full flex"
 					>
-						Next
-					</Button>
+						<source
+							src={"../static/2023ReelDesktop.mp4"}
+							type="video/mp4"
+						/>
+					</video>
+				</div>
+				<div className="col-start-1 row-start-3 w-full justify-center flex items-center"></div>
+			</div>
+			<div className="grid grid-rows-3 grid-flow-col xl:hidden">
+				<div className="col-start-1 row-start-1 row-span-3">
+					<video
+						playsInline
+						autoPlay
+						muted
+						loop
+						className="w-full flex"
+					>
+						<source
+							src={"../static/2023ReelMobile.mp4"}
+							type="video/mp4"
+						/>
+					</video>
+				</div>
+			</div>
+			<div className=" text-orange flex justify-start items-center text-3xl xl:text-5xl my-8  ml-3 z-20">
+				<div className="w-full xl:w-3/4 border-l-4 px-4 border-red">
+					<span
+						className={`${almaraiBold.className} uppercase text-orange`}
+					>
+						Boutique film makers.&nbsp;
+					</span>
+					<span
+						className={`${almaraiBold.className} uppercase text-yellow`}
+					>
+						relive the moments you never want to forget.
+					</span>
+				</div>
+			</div>
+			<div className="w-full flex justify-center xl:px-8 px-0 ">
+				<div className="z-20 justify-center items-center flex overflow-hidden w-screen xl:w-6/7 rounded-3xl pb-2">
+					<Swiper
+						onInit={(swiper) => {
+							setSwiper(swiper);
+						}}
+						slidesPerView={1}
+						spaceBetween={35}
+						// using "ratio" endpoints
+						breakpoints={{
+							"@0.75": {
+								slidesPerView: 2,
+								spaceBetween: 35,
+							},
+							"@1.00": {
+								slidesPerView: 3,
+								spaceBetween: 35,
+							},
+						}}
+						modules={[Mousewheel, Autoplay]}
+						autoplay={{
+							delay: 4000,
+							disableOnInteraction: false,
+						}}
+						mousewheel={true}
+						speed={1000}
+						onClick={() => {
+							projectCtx.setProject(
+								projects[swiper.clickedIndex]
+							);
+							router.push("/" + projects[swiper.clickedIndex].id);
+						}}
+						style={{ overflow: "hidden", cursor: "pointer" }}
+					>
+						<SwiperSlide
+							style={{
+								display: "flex",
+								justifyContent: "start",
+								textAlign: "start",
+								overflow: "hidden",
+							}}
+						>
+							<img
+								src="../static/craig.gif"
+								className="rounded-3xl"
+							/>
+							<div
+								style={{
+									textShadow: ".25px .25px .25px black",
+								}}
+								className={`${almaraiLight.className} ml-8 uppercase absolute z-10 text-5xl xl:text-6xl font-bold text-orange mt-8 w-full flex-nowrap flex`}
+							>
+								<div>
+									<div className="flex flex-nowrap">
+										<span className="flex items-end">
+											Lily
+										</span>
+									</div>
+
+									<div
+										className={`${almaraiBold.className} `}
+									>
+										Craig
+									</div>
+								</div>
+							</div>
+						</SwiperSlide>
+						<SwiperSlide
+							style={{
+								display: "flex",
+								justifyContent: "start",
+								textAlign: "start",
+								overflow: "hidden",
+							}}
+						>
+							<img
+								src="../static/ash.gif"
+								className="rounded-3xl"
+							/>
+							<div
+								style={{
+									textShadow: ".25px .25px .25px black",
+								}}
+								className={`${almaraiLight.className} ml-8 uppercase absolute z-10 text-5xl xl:text-6xl font-bold text-red mt-8 w-full flex-nowrap flex`}
+							>
+								<div className="">
+									<div className=" flex flex-nowrap">
+										<span className=" flex items-end">
+											Ash
+										</span>
+									</div>
+
+									<div className={`${almaraiBold.className}`}>
+										Asia
+									</div>
+								</div>
+							</div>
+						</SwiperSlide>
+						<SwiperSlide
+							style={{
+								display: "flex",
+								justifyContent: "start",
+								textAlign: "start",
+								overflow: "hidden",
+							}}
+						>
+							<img
+								src="../static/evan.gif"
+								className="rounded-3xl"
+							/>
+							<div
+								style={{
+									textShadow: ".25px .25px .25px black",
+								}}
+								className={`${almaraiLight.className} ml-8 uppercase absolute z-10 text-5xl xl:text-6xl font-bold text-yellow mt-8 w-full flex-nowrap flex`}
+							>
+								<div className="">
+									<div className=" flex flex-nowrap">
+										<span className=" flex items-end">
+											Evan
+										</span>
+									</div>
+
+									<div className={`${almaraiBold.className}`}>
+										Emma
+									</div>
+								</div>
+							</div>
+						</SwiperSlide>
+						<SwiperSlide
+							style={{
+								display: "flex",
+								justifyContent: "start",
+								textAlign: "start",
+								overflow: "hidden",
+							}}
+						>
+							<img
+								src="../static/zach.gif"
+								className="rounded-3xl"
+							/>
+							<div
+								style={{
+									textShadow: ".25px .25px .25px black",
+								}}
+								className={`${almaraiLight.className} ml-8 uppercase absolute z-10 text-5xl xl:text-6xl font-bold text-orange mt-8 w-full flex-nowrap flex`}
+							>
+								<div className="">
+									<div className=" flex flex-nowrap">
+										<span className=" flex items-end">
+											Zach
+										</span>
+									</div>
+
+									<div className={`${almaraiBold.className}`}>
+										Almery
+									</div>
+								</div>
+							</div>
+						</SwiperSlide>
+						<SwiperSlide
+							style={{
+								display: "flex",
+								justifyContent: "start",
+								textAlign: "start",
+								overflow: "hidden",
+							}}
+						>
+							<div
+								style={{
+									textShadow: ".25px .25px .25px black",
+								}}
+								className={`${almaraiLight.className} ml-8 uppercase absolute z-10 text-5xl xl:text-6xl font-bold text-red mt-8 w-full flex-nowrap flex`}
+							>
+								<div className="">
+									<div className=" flex flex-nowrap">
+										<span className=" flex items-end">
+											Eric
+										</span>
+									</div>
+
+									<div className={`${almaraiBold.className}`}>
+										Christina
+									</div>
+								</div>
+							</div>
+							<img
+								src="../static/eric.gif"
+								className="rounded-3xl"
+							/>
+						</SwiperSlide>
+					</Swiper>
 				</div>
 			</div>
 		</div>
 	);
 };
 
-export default Splash;
+export default Home;

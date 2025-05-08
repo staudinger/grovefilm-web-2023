@@ -88,10 +88,43 @@ const Home = () => {
 	const router = useRouter();
 
 	return (
-		<div className="bg-slate-900 overflow-hidden flex flex-col">
+		<div className="bg-black overflow-hidden flex flex-col">
 			<NavBar />
 			<div className="justify-center xl:justify-start flex xl:items-start pt-16 xl:pt-0 ml-0 xl:ml-8">
 				<Logo color="#ba9467" />
+			</div>
+			<div className="grid-rows-3 grid-flow-col xl:grid hidden">
+				<div className="col-start-1 row-start-1 row-span-3">
+					<video
+						playsInline
+						autoPlay
+						muted
+						loop
+						className="w-full flex"
+					>
+						<source
+							src={"../static/2023ReelDesktop.mp4"}
+							type="video/mp4"
+						/>
+					</video>
+				</div>
+				<div className="col-start-1 row-start-3 w-full justify-center flex items-center"></div>
+			</div>
+			<div className="grid grid-rows-3 grid-flow-col xl:hidden">
+				<div className="col-start-1 row-start-1 row-span-3">
+					<video
+						playsInline
+						autoPlay
+						muted
+						loop
+						className="w-full flex"
+					>
+						<source
+							src={"../static/2023ReelMobile.mp4"}
+							type="video/mp4"
+						/>
+					</video>
+				</div>
 			</div>
 			<div className=" text-white flex justify-start items-center text-3xl xl:text-5xl mb-8 ml-9">
 				<div className="w-full xl:w-3/4 border-l px-4 border-secondary">

@@ -21,7 +21,7 @@ export default function RootLayout({
 					href="https://use.typekit.net/heo3ekj.css"
 				/>
 			</head>
-			<body className="bg-slate-900">
+			<body className="bg-black">
 				{/* react context provider for project details */}
 				<ProjectContextProvider>{children}</ProjectContextProvider>
 			</body>
