@@ -37,13 +37,13 @@ export default function NavBar(props: any) {
 	};
 
 	const pages = [
-		{
-			title: "MANIFESTO",
-			onClick: () => {
-				handleCloseNavMenu;
-				router.push("/manifesto");
-			},
-		},
+		// {
+		// 	title: "MANIFESTO",
+		// 	onClick: () => {
+		// 		handleCloseNavMenu;
+		// 		router.push("/manifesto");
+		// 	},
+		// },
 
 		{
 			title: "CONTACT",
@@ -113,7 +113,7 @@ export default function NavBar(props: any) {
 					</Menu>
 				</div>
 				<div className="xl:flex hidden">
-					<Button
+					{/* <Button
 						className={`${almaraiLight.className}`}
 						onClick={() => {
 							router.push("/manifesto");
@@ -125,7 +125,7 @@ export default function NavBar(props: any) {
 						}}
 					>
 						Manifesto
-					</Button>
+					</Button> */}
 
 					<Button
 						className={`${almaraiLight.className}`}
@@ -144,44 +144,4 @@ export default function NavBar(props: any) {
 			</div>
 		</AppBar>
 	);
-
-	// return (
-	// 	<div className="">
-	// 		<AppBar
-	// 			color="transparent"
-	// 			position="fixed"
-	// 			style={{ boxShadow: "none" }}
-	// 		>
-	// 			<div className=" justify-center xl:justify-end items-center flex pr-0 xl:pr-7 pt-5">
-	// 				<Button
-	// 					onClick={() => {
-	// 						router.push("/manifesto");
-	// 					}}
-	// 					sx={{
-	// 						color: "#fdf995",
-	// 						textShadow: "1px 1px 2px black",
-	// 						fontFamily: `${almaraiLight.style.fontFamily}`,
-	// 						fontSize: "1.25rem",
-	// 					}}
-	// 				>
-	// 					Manifesto
-	// 				</Button>
-
-	// 				<Button
-	// 					onClick={() => {
-	// 						router.push("/contact");
-	// 					}}
-	// 					sx={{
-	// 						color: "#fdf995",
-	// 						textShadow: "1px 1px 2px black",
-	// 						fontFamily: `${almaraiLight.style.fontFamily}`,
-	// 						fontSize: "1.25rem",
-	// 					}}
-	// 				>
-	// 					Contact
-	// 				</Button>
-	// 			</div>
-	// 		</AppBar>
-	// 	</div>
-	// );
 }

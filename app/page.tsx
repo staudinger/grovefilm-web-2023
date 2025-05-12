@@ -133,11 +133,17 @@ const Home = () => {
 				<div className="w-full xl:w-3/4 border-l-4 px-4 border-red">
 					<span
 						className={`${almaraiBold.className} uppercase text-orange`}
+						style={{
+							textShadow: "2px 1px .5px #D11E06",
+						}}
 					>
 						Boutique film makers.&nbsp;
 					</span>
 					<span
 						className={`${almaraiBold.className} uppercase text-yellow`}
+						style={{
+							textShadow: "2px 1px .5px #ffa128",
+						}}
 					>
 						relive the moments you never want to forget.
 					</span>
@@ -191,7 +197,7 @@ const Home = () => {
 							/>
 							<div
 								style={{
-									textShadow: ".25px .25px .25px black",
+									textShadow: "2px 1px .5px #D11E06",
 								}}
 								className={`${almaraiLight.className} ml-8 uppercase absolute z-10 text-5xl xl:text-6xl font-bold text-orange mt-8 w-full flex-nowrap flex`}
 							>
@@ -224,7 +230,7 @@ const Home = () => {
 							/>
 							<div
 								style={{
-									textShadow: ".25px .25px .25px black",
+									textShadow: "2px 1px .5px #ffa128",
 								}}
 								className={`${almaraiLight.className} ml-8 uppercase absolute z-10 text-5xl xl:text-6xl font-bold text-red mt-8 w-full flex-nowrap flex`}
 							>
@@ -255,7 +261,7 @@ const Home = () => {
 							/>
 							<div
 								style={{
-									textShadow: ".25px .25px .25px black",
+									textShadow: "2px 1px .5px #D11E06",
 								}}
 								className={`${almaraiLight.className} ml-8 uppercase absolute z-10 text-5xl xl:text-6xl font-bold text-yellow mt-8 w-full flex-nowrap flex`}
 							>
@@ -286,7 +292,7 @@ const Home = () => {
 							/>
 							<div
 								style={{
-									textShadow: ".25px .25px .25px black",
+									textShadow: "2px 1px .5px #fdf995",
 								}}
 								className={`${almaraiLight.className} ml-8 uppercase absolute z-10 text-5xl xl:text-6xl font-bold text-orange mt-8 w-full flex-nowrap flex`}
 							>
@@ -313,7 +319,7 @@ const Home = () => {
 						>
 							<div
 								style={{
-									textShadow: ".25px .25px .25px black",
+									textShadow: "2px 1px .5px #ffa128",
 								}}
 								className={`${almaraiLight.className} ml-8 uppercase absolute z-10 text-5xl xl:text-6xl font-bold text-red mt-8 w-full flex-nowrap flex`}
 							>
@@ -335,6 +341,29 @@ const Home = () => {
 							/>
 						</SwiperSlide>
 					</Swiper>
+				</div>
+			</div>
+			<div className=" text-orange flex justify-start items-center text-3xl xl:text-5xl my-8  ml-3 z-20">
+				<div className="w-full xl:w-3/4 border-l-4 px-4 border-red">
+					<span
+						className={`${almaraiBold.className} uppercase text-orange`}
+						style={{
+							textShadow: "2px 1px .5px #D11E06",
+						}}
+					>
+						Start of a season. End of an era. Smooching in sunshine.
+						Wrestling in rain. Your story, is woven by these
+						moments.
+					</span>
+					<span
+						className={`${almaraiBold.className} uppercase text-yellow`}
+						style={{
+							textShadow: "2px 1px .5px #ffa128",
+						}}
+					>
+						Grovefilm is here to tell your story, so you can relive
+						the moments you never want to forget.{" "}
+					</span>
 				</div>
 			</div>
 		</div>

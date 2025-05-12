@@ -7,16 +7,14 @@ const Logo = ({ color = "#ba9467" }: { color: string }) => {
 	return (
 		<div className="flex justify-center items-center mb-4 mt-4">
 			<div
-				// style={{
-				// 	color: color,
-				// }}
+				style={{ textShadow: "2px 1px .5px #D11E06" }}
 				className="tracking-tighter font-latienne-pro font-bold text-3xl xl:text-5xl capitalize text-orange"
 			>
 				Grove
 			</div>
 			<div
 				style={{
-					// color: color,
+					textShadow: "2px 1px .5px #D11E06",
 					letterSpacing: "-.1em",
 				}}
 				className="font-latienne-pro font-bold text-3xl xl:text-5xl text-orange lowercase"
@@ -26,13 +24,16 @@ const Logo = ({ color = "#ba9467" }: { color: string }) => {
 			<div
 				style={{
 					paddingTop: 1,
-					// color: color,
+					textShadow: "2px 1px .5px #D11E06",
 				}}
 				className="tracking-tighter font-latienne-pro font-bold text-3xl xl:text-5xl text-orange lowercase"
 			>
 				i
 			</div>
-			<div className="tracking-tighter font-latienne-pro font-bold text-3xl xl:text-5xl text-orange lowercase">
+			<div
+				className="tracking-tighter font-latienne-pro font-bold text-3xl xl:text-5xl text-orange lowercase"
+				style={{ textShadow: "2px 1px .5px #D11E06" }}
+			>
 				lm
 			</div>
 			<img src="../static/handsWhite.png" width="80px" />
