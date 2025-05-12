@@ -36,7 +36,7 @@ const Project = ({ params }: { params: { project: string } }) => {
 					<Logo color="#ba9467" />
 				</Button>
 			</div>
-			<div className=" xl:mt-0 mt-24">
+			<div className=" xl:mt-0 mt-24 xl:h-full h-auto">
 				<iframe
 					src={
 						"https://player.vimeo.com/video/" +
@@ -50,7 +50,7 @@ const Project = ({ params }: { params: { project: string } }) => {
 					className=" h-1/4 sm:h-full md:h-1/2 lg:h-5/6"
 				></iframe>
 			</div>
-			<div className="flex m-8 lg:w-1/2">
+			<div className="flex mx-8 mb-8 lg:w-1/2">
 				<div
 					className={`${almaraiBold.className} text-3xl w-full text-red uppercase`}
 				>
@@ -81,19 +81,7 @@ const Project = ({ params }: { params: { project: string } }) => {
 												? key[1][0] + ", " + key[1][1]
 												: key[1]}
 										</div>
-										{/* <Divider
-											sx={{
-												backgroundColor: '',
-											}}
-										/> */}
 									</div>
-									{/* <div className="mx-8 lg:w-1/2">
-										<Divider
-											sx={{
-												backgroundColor: "#ba9467",
-											}}
-										/>
-									</div> */}
 								</div>
 							);
 						}
