@@ -170,11 +170,11 @@ const Home = () => {
 						}}
 						modules={[Mousewheel, Autoplay]}
 						autoplay={{
-							delay: 4000,
+							delay: 2000,
 							disableOnInteraction: false,
 						}}
-						mousewheel={true}
-						speed={1000}
+						mousewheel={false}
+						speed={1500}
 						onClick={() => {
 							projectCtx.setProject(
 								projects[swiper.clickedIndex]
