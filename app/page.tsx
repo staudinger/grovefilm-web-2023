@@ -11,6 +11,7 @@ import { useRouter } from "next/navigation";
 import Logo from "@/components/Logo";
 import { ProjectContext } from "@/ProjectContext";
 import { Almarai } from "next/font/google";
+import Lilly from "@/static/lilly.png";
 
 const almaraiLight = Almarai({
 	subsets: ["arabic"],
@@ -150,7 +151,7 @@ const Home = () => {
 				</div>
 			</div>
 			<div className="w-full flex justify-center xl:px-8 px-0 ">
-				<div className="z-20 justify-center items-center flex overflow-hidden w-screen xl:w-6/7 rounded-3xl pb-2">
+				<div className="z-20 justify-center items-center flex overflow-hidden w-screen rounded-3xl pb-2">
 					<Swiper
 						onInit={(swiper) => {
 							setSwiper(swiper);
@@ -181,7 +182,11 @@ const Home = () => {
 							);
 							router.push("/" + projects[swiper.clickedIndex].id);
 						}}
-						style={{ overflow: "hidden", cursor: "pointer" }}
+						style={{
+							overflow: "hidden",
+							cursor: "pointer",
+							width: "100%",
+						}}
 					>
 						<SwiperSlide
 							style={{
@@ -189,12 +194,26 @@ const Home = () => {
 								justifyContent: "start",
 								textAlign: "start",
 								overflow: "hidden",
+								// width: "100%",
 							}}
 						>
-							<img
+							<video
+								playsInline
+								autoPlay
+								muted
+								loop
+								className="w-full"
+								poster={"../static/lilly.png"}
+							>
+								<source
+									src={"../static/lilly.mp4"}
+									type="video/mp4"
+								/>
+							</video>
+							{/* <img
 								src="../static/craig.gif"
 								className="rounded-3xl"
-							/>
+							/> */}
 							<div
 								style={{
 									textShadow: "2px 1px .5px #D11E06",
@@ -224,10 +243,19 @@ const Home = () => {
 								overflow: "hidden",
 							}}
 						>
-							<img
-								src="../static/ash.gif"
-								className="rounded-3xl"
-							/>
+							<video
+								playsInline
+								autoPlay
+								muted
+								loop
+								className="w-full"
+								poster={"../static/asia.png"}
+							>
+								<source
+									src={"../static/asia.mp4"}
+									type="video/mp4"
+								/>
+							</video>
 							<div
 								style={{
 									textShadow: "2px 1px .5px #ffa128",
@@ -255,10 +283,19 @@ const Home = () => {
 								overflow: "hidden",
 							}}
 						>
-							<img
-								src="../static/evan.gif"
-								className="rounded-3xl"
-							/>
+							<video
+								playsInline
+								autoPlay
+								muted
+								loop
+								className="w-full"
+								poster={"../static/emma.png"}
+							>
+								<source
+									src={"../static/emma.mp4"}
+									type="video/mp4"
+								/>
+							</video>
 							<div
 								style={{
 									textShadow: "2px 1px .5px #D11E06",
@@ -286,13 +323,22 @@ const Home = () => {
 								overflow: "hidden",
 							}}
 						>
-							<img
-								src="../static/zach.gif"
-								className="rounded-3xl"
-							/>
+							<video
+								playsInline
+								autoPlay
+								muted
+								loop
+								className="w-full"
+								poster={"../static/almery.png"}
+							>
+								<source
+									src={"../static/almery.mp4"}
+									type="video/mp4"
+								/>
+							</video>
 							<div
 								style={{
-									textShadow: "2px 1px .5px #fdf995",
+									textShadow: "2px 1px .5px #D11E06",
 								}}
 								className={`${almaraiLight.className} ml-8 uppercase absolute z-10 text-5xl xl:text-6xl font-bold text-orange mt-8 w-full flex-nowrap flex`}
 							>
@@ -309,7 +355,7 @@ const Home = () => {
 								</div>
 							</div>
 						</SwiperSlide>
-						<SwiperSlide
+						{/* <SwiperSlide
 							style={{
 								display: "flex",
 								justifyContent: "start",
@@ -339,7 +385,7 @@ const Home = () => {
 								src="../static/eric.gif"
 								className="rounded-3xl"
 							/>
-						</SwiperSlide>
+						</SwiperSlide> */}
 					</Swiper>
 				</div>
 			</div>
