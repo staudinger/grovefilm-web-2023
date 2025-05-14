@@ -421,8 +421,7 @@ const Home = () => {
 						}}
 					>
 						Start of a season. End of an era. Smooching in sunshine.
-						Wrestling in rain. Your story, is woven by these
-						moments.
+						Wrestling in rain. This is your story.
 					</span>
 					<span
 						className={`${almaraiBold.className} uppercase text-yellow`}
