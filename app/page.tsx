@@ -11,7 +11,6 @@ import { useRouter } from "next/navigation";
 import Logo from "@/components/Logo";
 import { ProjectContext } from "@/ProjectContext";
 import { Almarai } from "next/font/google";
-import Lilly from "@/static/lilly.png";
 
 const almaraiLight = Almarai({
 	subsets: ["arabic"],
@@ -23,6 +22,8 @@ const almaraiBold = Almarai({
 });
 
 const Home = () => {
+	const [swiperIndex, setSwiperIndex] = useState(null);
+
 	const [swiper, setSwiper] = useState<any>(null);
 	const projectCtx = useContext(ProjectContext);
 
@@ -94,9 +95,7 @@ const Home = () => {
 			<div className="py-1 pl-8 z-20 xl:w-4/5 flex fixed">
 				<Logo color="#ba9467" />
 			</div>
-			{/* <div className="justify-center xl:justify-start flex xl:items-start pt-16 xl:pt-0 ml-0 xl:ml-8">
-				<Logo color="#ba9467" />
-			</div> */}
+
 			<div className="grid-rows-3 grid-flow-col xl:grid hidden">
 				<div className="col-start-1 row-start-1 row-span-3">
 					<video
@@ -107,7 +106,7 @@ const Home = () => {
 						className="w-full flex"
 					>
 						<source
-							src={"../static/2023ReelDesktop.mp4"}
+							src={"../static/reel2025.mp4"}
 							type="video/mp4"
 						/>
 					</video>
@@ -124,7 +123,7 @@ const Home = () => {
 						className="w-full flex"
 					>
 						<source
-							src={"../static/2023ReelMobile.mp4"}
+							src={"../static/mobileReel2025.mp4"}
 							type="video/mp4"
 						/>
 					</video>
@@ -177,10 +176,15 @@ const Home = () => {
 						mousewheel={false}
 						speed={1500}
 						onClick={() => {
+							setSwiperIndex(swiper.clickedIndex);
 							projectCtx.setProject(
 								projects[swiper.clickedIndex]
 							);
-							router.push("/" + projects[swiper.clickedIndex].id);
+							setTimeout(() => {
+								router.push(
+									"/" + projects[swiper.clickedIndex].id
+								);
+							}, 1000);
 						}}
 						style={{
 							overflow: "hidden",
@@ -194,7 +198,6 @@ const Home = () => {
 								justifyContent: "start",
 								textAlign: "start",
 								overflow: "hidden",
-								// width: "100%",
 							}}
 						>
 							<video
@@ -204,16 +207,18 @@ const Home = () => {
 								loop
 								className="w-full"
 								poster={"../static/lilly.png"}
+								style={{
+									opacity: swiperIndex === 0 ? 0.3 : 1,
+									transition: "opacity 0.2s ease",
+									cursor: "pointer",
+									borderRadius: "8px",
+								}}
 							>
 								<source
 									src={"../static/lilly.mp4"}
 									type="video/mp4"
 								/>
 							</video>
-							{/* <img
-								src="../static/craig.gif"
-								className="rounded-3xl"
-							/> */}
 							<div
 								style={{
 									textShadow: "2px 1px .5px #D11E06",
@@ -250,6 +255,12 @@ const Home = () => {
 								loop
 								className="w-full"
 								poster={"../static/asia.png"}
+								style={{
+									opacity: swiperIndex === 1 ? 0.3 : 1,
+									transition: "opacity 0.2s ease",
+									cursor: "pointer",
+									borderRadius: "8px",
+								}}
 							>
 								<source
 									src={"../static/asia.mp4"}
@@ -290,6 +301,12 @@ const Home = () => {
 								loop
 								className="w-full"
 								poster={"../static/emma.png"}
+								style={{
+									opacity: swiperIndex === 2 ? 0.3 : 1,
+									transition: "opacity 0.2s ease",
+									cursor: "pointer",
+									borderRadius: "8px",
+								}}
 							>
 								<source
 									src={"../static/emma.mp4"}
@@ -330,6 +347,12 @@ const Home = () => {
 								loop
 								className="w-full"
 								poster={"../static/almery.png"}
+								style={{
+									opacity: swiperIndex === 3 ? 0.3 : 1,
+									transition: "opacity 0.2s ease",
+									cursor: "pointer",
+									borderRadius: "8px",
+								}}
 							>
 								<source
 									src={"../static/almery.mp4"}

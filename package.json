@@ -1,38 +1,38 @@
 {
-  "name": "grovefilm-web-2023",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@emailjs/browser": "^3.11.0",
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@fontsource/poppins": "^5.0.8",
-    "@mui/icons-material": "^5.14.11",
-    "@mui/material": "^5.14.11",
-    "@mui/x-date-pickers": "^6.17.0",
-    "dayjs": "^1.11.10",
-    "firebase": "^10.6.0",
-    "firebase-admin": "^11.11.0",
-    "framer-motion": "^10.16.4",
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "react-player": "^2.13.0",
-    "swiper": "^10.3.0"
-  },
-  "devDependencies": {
-    "@types/node": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "autoprefixer": "latest",
-    "postcss": "latest",
-    "tailwindcss": "latest",
-    "typescript": "latest"
-  }
+	"name": "grovefilm-web-2023",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@emailjs/browser": "^3.11.0",
+		"@emotion/react": "^11.11.1",
+		"@emotion/styled": "^11.11.0",
+		"@fontsource/poppins": "^5.0.8",
+		"@mui/icons-material": "^5.14.11",
+		"@mui/material": "^5.14.11",
+		"@mui/x-date-pickers": "^6.17.0",
+		"dayjs": "^1.11.10",
+		"firebase": "^10.6.0",
+		"firebase-admin": "^11.11.0",
+		"framer-motion": "^10.16.4",
+		"next": "latest",
+		"react": "latest",
+		"react-dom": "latest",
+		"react-player": "^2.13.0",
+		"swiper": "^10.3.1"
+	},
+	"devDependencies": {
+		"@types/node": "latest",
+		"@types/react": "latest",
+		"@types/react-dom": "latest",
+		"autoprefixer": "latest",
+		"postcss": "latest",
+		"tailwindcss": "latest",
+		"typescript": "latest"
+	}
 }
