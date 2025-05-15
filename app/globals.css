@@ -6,3 +6,12 @@
 	width: 0; /* Remove scrollbar space */
 	background: transparent; /* Optional: just make scrollbar invisible */
 }
+
+.fade-text {
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+}
+
+.fade-text.show {
+	opacity: 1;
+}

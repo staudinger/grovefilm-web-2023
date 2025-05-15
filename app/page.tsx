@@ -11,6 +11,7 @@ import { useRouter } from "next/navigation";
 import Logo from "@/components/Logo";
 import { ProjectContext } from "@/ProjectContext";
 import { Almarai } from "next/font/google";
+import FadeText from "@/components/FadeText";
 
 const almaraiLight = Almarai({
 	subsets: ["arabic"],
@@ -228,14 +229,14 @@ const Home = () => {
 								<div>
 									<div className="flex flex-nowrap">
 										<span className="flex items-end">
-											Lily
+											<FadeText text="Lily" />
 										</span>
 									</div>
 
 									<div
 										className={`${almaraiBold.className} `}
 									>
-										Craig
+										<FadeText text="Craig" />
 									</div>
 								</div>
 							</div>
@@ -276,12 +277,12 @@ const Home = () => {
 								<div className="">
 									<div className=" flex flex-nowrap">
 										<span className=" flex items-end">
-											Ash
+											<FadeText text="Ash" />
 										</span>
 									</div>
 
 									<div className={`${almaraiBold.className}`}>
-										Asia
+										<FadeText text="Asia" />
 									</div>
 								</div>
 							</div>
@@ -322,12 +323,12 @@ const Home = () => {
 								<div className="">
 									<div className=" flex flex-nowrap">
 										<span className=" flex items-end">
-											Evan
+											<FadeText text="Evan" />
 										</span>
 									</div>
 
 									<div className={`${almaraiBold.className}`}>
-										Emma
+										<FadeText text="Emma" />
 									</div>
 								</div>
 							</div>
@@ -368,12 +369,12 @@ const Home = () => {
 								<div className="">
 									<div className=" flex flex-nowrap">
 										<span className=" flex items-end">
-											Zach
+											<FadeText text="Zach" />
 										</span>
 									</div>
 
 									<div className={`${almaraiBold.className}`}>
-										Almery
+										<FadeText text="Almery" />
 									</div>
 								</div>
 							</div>
