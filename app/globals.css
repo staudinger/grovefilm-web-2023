@@ -7,11 +7,27 @@
 	background: transparent; /* Optional: just make scrollbar invisible */
 }
 
-.fade-text {
+/* .fade-text {
 	opacity: 0;
 	transition: opacity 0.5s ease-in-out;
 }
 
 .fade-text.show {
 	opacity: 1;
+} */
+
+.fade-loop {
+	animation: fadeInOut 5s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
 }
