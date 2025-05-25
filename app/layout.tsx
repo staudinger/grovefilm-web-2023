@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import ProjectContextProvider from "@/ProjectContext";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
 	title: "Grovefilm",
@@ -24,6 +25,7 @@ export default function RootLayout({
 			<body className="bg-black">
 				{/* react context provider for project details */}
 				<ProjectContextProvider>{children}</ProjectContextProvider>
+				<Analytics />
 			</body>
 		</html>
 	);
